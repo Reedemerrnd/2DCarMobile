@@ -6,16 +6,18 @@ namespace Game
 {
     internal class GameStarter : MonoBehaviour
     {
-        [SerializeField] private TransportType _transport;
-        private const GameState INITIAL_STATE = GameState.MainMenu;
+        [SerializeField] private GameModel _gameModel;
         private MainController _mainController;
 
-        private void Awake()
+        private void Start()
         {
-            var gameModel = new GameModel(INITIAL_STATE);
-            _mainController = new MainController(gameModel);
+            _gameModel.Init();
+            _mainController = new MainController(_gameModel);
         }
 
-
+        private void OnDestroy()
+        {
+            _mainController.Dispose();
+        }
     }
 }

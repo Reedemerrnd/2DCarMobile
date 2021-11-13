@@ -1,11 +1,7 @@
-﻿using System;
-using UnityEngine;
-
-namespace Game.Utils.ResourcesLoad
+﻿namespace Game.Utils
 {
-    internal interface IResourceLoader<T> where T : Enum
+    internal interface IResourceLoader : ITransportLoader, IUILoader, IInputLoader, ILoadLevels
     {
-        public GameObject Load(T type);
-    }
 
+    }
 }

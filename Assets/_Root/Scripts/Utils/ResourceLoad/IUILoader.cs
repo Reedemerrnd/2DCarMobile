@@ -1,6 +1,6 @@
-﻿namespace Game.Utils.ResourcesLoad
+﻿namespace Game.Utils
 {
-    internal interface IUILoader : IResourceLoader<UIType>
+    internal interface IUILoader : ILoadResources<UIType>
     {
 
     }

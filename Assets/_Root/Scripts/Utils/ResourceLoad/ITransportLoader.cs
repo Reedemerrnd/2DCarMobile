@@ -1,6 +1,6 @@
-﻿namespace Game.Utils.ResourcesLoad
+﻿namespace Game.Utils
 {
-    internal interface ITransportLoader : IResourceLoader<TransportType>
+    internal interface ITransportLoader : ILoadResources<TransportType>
     {
 
     }

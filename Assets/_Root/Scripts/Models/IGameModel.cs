@@ -1,6 +1,6 @@
 ﻿namespace Game.Models
 {
-    internal interface IGameModel : IReadGameState, ISetGameState
+    internal interface IGameModel : IReadGameState, ISetGameState, IPlayerSettings
     {
 
     }

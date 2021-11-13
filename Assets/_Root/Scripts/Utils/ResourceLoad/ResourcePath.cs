@@ -6,14 +6,19 @@ namespace Game.Utils.ResourcesLoad
     {
         public static Dictionary<TransportType, string> Transport = new Dictionary<TransportType, string>()
         {
-            {TransportType.Car, $"Resources/{TransportType.Car}" },
-            {TransportType.Boat, $"Resources/{TransportType.Boat}" }
+            {TransportType.Car, $"Prefabs/Transport/{TransportType.Car}" },
+            {TransportType.Boat, $"Prefabs/Transport/{TransportType.Boat}" }
         };
 
         public static Dictionary<UIType, string> UI = new Dictionary<UIType, string>()
         {
-            {UIType.MainMenu, $"Resources/{UIType.MainMenu}" },
-            {UIType.Settings, $"Resources/{UIType.Settings}" }
+            {UIType.MainMenu, $"Prefabs/UI/{UIType.MainMenu}" },
+            {UIType.SettingsMenu, $"Prefabs/UI/{UIType.SettingsMenu}" }
+        };
+
+        public static Dictionary<InputType, string> Input = new Dictionary<InputType, string>()
+        {
+            {InputType.Keyboard, $"Prefabs/Input/InputView_{InputType.Keyboard}" },
         };
     }
 
