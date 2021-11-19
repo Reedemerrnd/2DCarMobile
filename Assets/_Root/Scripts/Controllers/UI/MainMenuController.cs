@@ -1,5 +1,6 @@
 using Game.Models;
 using Game.Utils;
+using Services.Ads.UnityAds;
 using UnityEngine;
 
 namespace Game.Controllers
@@ -16,12 +17,14 @@ namespace Game.Controllers
             _gameModel = gameModel;
             _view = _uIloader.Spawn<MainMenuView>(UIType.MainMenu, Vector3.zero, Quaternion.identity);
             AddGameObject(_view.gameObject);
-            _view.Init(StarGame, OpenSettings);
+            _view.Init(StarGame, OpenSettings, PlayRewardableAd);
         }
 
         private void StarGame() => _gameModel.UpdateState(GameState.RunGame);
 
         private void OpenSettings() => _gameModel.UpdateState(GameState.SettingsMenu);
+
+        private void PlayRewardableAd() => UnityAdsService.Instance.RewardedPlayer.Play();
 
     }
 }
