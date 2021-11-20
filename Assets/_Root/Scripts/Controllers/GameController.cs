@@ -1,6 +1,8 @@
 using Game.Models;
 using Game.Utils;
 using Game.Views;
+using Services.Ads.UnityAds;
+using Services.Analytics;
 using UnityEngine;
 
 namespace Game.Controllers
@@ -25,7 +27,8 @@ namespace Game.Controllers
 
             var carController = new TransportController(_resourceLoader, gameModel);
             AddController(carController);
-
+            AnalyticsManager.Instance.SendEvent("Game Started");
+            UnityAdsService.Instance.InterstitialPlayer.Play();
         }
 
         private IInput LoadInput()

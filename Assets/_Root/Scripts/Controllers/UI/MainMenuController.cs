@@ -24,7 +24,35 @@ namespace Game.Controllers
 
         private void OpenSettings() => _gameModel.UpdateState(GameState.SettingsMenu);
 
-        private void PlayRewardableAd() => UnityAdsService.Instance.RewardedPlayer.Play();
+        private void PlayRewardableAd()
+        {
+            SubscribeRewardedAd();
+            UnityAdsService.Instance.RewardedPlayer.Play();
+        }
 
+        private void SubscribeRewardedAd()
+        {
+            UnityAdsService.Instance.RewardedPlayer.Finished += RewardedSucces;
+            UnityAdsService.Instance.RewardedPlayer.Failed += RewardedFailed;
+            UnityAdsService.Instance.RewardedPlayer.Skipped += RewardedFailed;
+        }
+
+        private void UnsubscribeRewardedAd()
+        {
+            UnityAdsService.Instance.RewardedPlayer.Finished -= RewardedSucces;
+            UnityAdsService.Instance.RewardedPlayer.Failed -= RewardedFailed;
+            UnityAdsService.Instance.RewardedPlayer.Skipped -= RewardedFailed;
+        }
+
+        private void RewardedFailed()
+        {
+            Debug.Log("Rewarded failed");
+        }
+
+        private void RewardedSucces()
+        {
+            Debug.Log("Rewarded succes");
+
+        }
     }
 }

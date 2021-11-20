@@ -22,31 +22,26 @@ namespace Game.Controllers
             _gameModel.State.SubscribeOnChange(GameStateChanged);
             GameStateChanged(_gameModel.State.Value);
             UnityAdsService.Instance.Init(unityAdsSettings);
-            UnityAdsService.Instance.InterstitialPlayer.Play();
         }
 
         private void GameStateChanged(GameState state)
         {
+            DisposeAllControllers();
             switch (state)
             {
                 case GameState.MainMenu:
-                    DisposeAllControllers();
                     _mainMenuController = new MainMenuController(_resourceLoader, _gameModel);
                     AddController(_mainMenuController);
                     break;
                 case GameState.RunGame:
-                    DisposeAllControllers();
                     _gameController = new GameController(_resourceLoader, _gameModel);
-                    AnalyticsManager.Instance.SendEvent("Game Started");
                     AddController(_gameController);
                     break;
                 case GameState.SettingsMenu:
-                    DisposeAllControllers();
                     _settingsController = new SettingsMenuController(_resourceLoader, _gameModel);
                     AddController(_settingsController);
                     break;
                 default:
-                    DisposeAllControllers();
                     break;
             }
         }
