@@ -46,5 +46,11 @@ namespace Services.Analytics
             for (int i = 0; i < _services.Length; i++)
                 _services[i].SendEvent(eventName, eventData);
         }
+
+        public void SentTransaction(string productId, decimal amount, string currency)
+        {
+            for (int i = 0; i < _services.Length; i++)
+                _services[i].SendTransaction(productId, amount, currency);
+        }
     }
 }

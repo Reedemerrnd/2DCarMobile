@@ -1,3 +1,4 @@
+using Services.Analytics;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
@@ -86,8 +87,18 @@ namespace Services.IAP
                 return PurchaseProcessingResult.Complete;
             }
 
-            PurchaseSucceed.Invoke();
+            OnPurchaseSucceed(args);
             return PurchaseProcessingResult.Complete;
+        }
+
+        private void OnPurchaseSucceed(PurchaseEventArgs args)
+        {
+            var payout = args.purchasedProduct.definition.payout;
+            var id = args.purchasedProduct.definition.id;
+            var amount = payout == null ? 0 : (decimal)payout.quantity;
+            var currency = args.purchasedProduct.metadata.isoCurrencyCode;
+            AnalyticsManager.Instance.SentTransaction(id, amount, currency);
+            PurchaseSucceed.Invoke();
         }
 
         public void OnPurchaseFailed(UnityEngine.Purchasing.Product product, PurchaseFailureReason failureReason) =>
