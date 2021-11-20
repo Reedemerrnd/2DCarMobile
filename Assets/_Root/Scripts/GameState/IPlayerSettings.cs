@@ -4,5 +4,6 @@
     {
         public TransportType TransportType { get; }
         public float Speed { get; }
+        public float JumpHeight { get; }
     }
 }

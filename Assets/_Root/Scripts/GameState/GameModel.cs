@@ -8,10 +8,12 @@ namespace Game.Models
         private TransportType _transport;
         private float _speed;
         private InputType _input;
+        private float _jumpHeight;
 
         public IReadOnlySubscriptionProperty<GameState> State => _state;
         public TransportType TransportType => _transport;
         public float Speed => _speed;
+        public float JumpHeight => _jumpHeight;
         public InputType InputType => _input;
 
 

@@ -21,12 +21,15 @@ namespace Game.Controllers
 
             _input = LoadInput();
             _input.Init();
+            var transportModel = new TransportModel(_gameModel.TransportType, _gameModel.Speed, _gameModel.JumpHeight);
 
-            var backgroundController = new BackgroundController(_resourceLoader, _input, new TransportModel(_gameModel.Speed));
+            var backgroundController = new BackgroundController(_resourceLoader, _input, transportModel);
             AddController(backgroundController);
 
-            var carController = new TransportController(_resourceLoader, gameModel);
+            var carController = new TransportController(_resourceLoader, transportModel);
             AddController(carController);
+
+
             AnalyticsManager.Instance.SendEvent("Game Started");
             UnityAdsService.Instance.InterstitialPlayer.Play();
         }
