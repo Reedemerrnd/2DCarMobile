@@ -1,18 +1,32 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Purchasing;
 
 namespace Services.IAP
 {
-    internal class IAPService : MonoBehaviour, IStoreListener
+    internal class IAPService : IStoreListener
     {
-        [Header("Components")]
-        [SerializeField] private ProductLibrary productLibrary;
+        private static IAPService _instance;
 
-        [field: Header("Events")]
-        [field: SerializeField] public UnityEvent Initialized { get; private set; }
-        [field: SerializeField] public UnityEvent PurchaseSucceed { get; private set; }
-        [field: SerializeField] public UnityEvent PurchaseFailed { get; private set; }
+        public static IAPService Instance
+        {
+            get
+            {
+                if(_instance == null)
+                {
+                    _instance = new IAPService();
+                }
+                return _instance;
+            }
+        }
+
+
+        private ProductLibrary _productLibrary;
+
+        public event Action Initialized;
+        public event Action PurchaseSucceed;
+        public event Action PurchaseFailed;
 
         private bool _isInitialized;
         private IStoreController _controller;
@@ -21,15 +35,13 @@ namespace Services.IAP
         private PurchaseRestorer _purchaseRestorer;
 
 
-        private void Awake() =>
-            InitializeProducts();
-
-        private void InitializeProducts()
+        public void InitializeProducts(ProductLibrary productLibrary)
         {
+            _productLibrary = productLibrary;
             StandardPurchasingModule purchasingModule = StandardPurchasingModule.Instance();
             ConfigurationBuilder builder = ConfigurationBuilder.Instance(purchasingModule);
 
-            foreach (Product product in productLibrary.Products)
+            foreach (Product product in _productLibrary.Products)
                 builder.AddProduct(product.Id, product.ProductType);
 
             Log("Products initialized");

@@ -251,6 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameSettings: {fileID: 11400000, guid: 3ebfd4cb6dec3294ba3127dbb5888316, type: 2}
   _adsSettings: {fileID: 11400000, guid: 5911c4228ed29f3478cf37e08d89a06e, type: 2}
+  _productLibrary: {fileID: 11400000, guid: 9d38fe8ec47b08544840998f1baf07b2, type: 2}
 --- !u!1 &1426241359
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using Game.Models;
 using Game.Utils;
 using Services.Ads.UnityAds;
+using Services.IAP;
 using UnityEngine;
 
 namespace Game.Controllers
@@ -17,12 +18,43 @@ namespace Game.Controllers
             _gameModel = gameModel;
             _view = _uIloader.Spawn<MainMenuView>(UIType.MainMenu, Vector3.zero, Quaternion.identity);
             AddGameObject(_view.gameObject);
-            _view.Init(StarGame, OpenSettings, PlayRewardableAd);
+            _view.Init(StarGame, OpenSettings, PlayRewardableAd, BuyProduct);
         }
 
         private void StarGame() => _gameModel.UpdateState(GameState.RunGame);
 
         private void OpenSettings() => _gameModel.UpdateState(GameState.SettingsMenu);
+
+
+        private void BuyProduct(string id)
+        {
+            SubscribeIAP();
+            IAPService.Instance.Buy(id);
+        }
+
+        private void SubscribeIAP()
+        {
+            IAPService.Instance.PurchaseFailed += PurchaseFailed;
+            IAPService.Instance.PurchaseSucceed += PurchaseSucceded;
+        }
+
+        private void UnsubscribeIAP()
+        {
+            IAPService.Instance.PurchaseFailed -= PurchaseFailed;
+            IAPService.Instance.PurchaseSucceed -= PurchaseSucceded;
+        }
+
+        private void PurchaseSucceded()
+        {
+            UnsubscribeIAP();
+            Debug.Log("Purchased");
+        }
+
+        private void PurchaseFailed()
+        {
+            UnsubscribeIAP();
+            Debug.Log("Purchase failed");
+        }
 
         private void PlayRewardableAd()
         {
@@ -47,11 +79,13 @@ namespace Game.Controllers
         private void RewardedFailed()
         {
             Debug.Log("Rewarded failed");
+            UnsubscribeRewardedAd();
         }
 
         private void RewardedSucces()
         {
             Debug.Log("Rewarded succes");
+            UnsubscribeRewardedAd();
 
         }
     }
