@@ -1,4 +1,4 @@
-namespace Game.Views
+namespace Game.Transport
 {
     internal class BoatView : TransportView
     {

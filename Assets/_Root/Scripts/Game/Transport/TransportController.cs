@@ -1,9 +1,10 @@
-﻿using Game.Models;
+﻿using Game.Controllers;
+using Game.Models;
 using Game.Utils;
 using Game.Views;
 using UnityEngine;
 
-namespace Game.Controllers
+namespace Game.Transport
 {
     internal class TransportController : BaseController
     {
@@ -15,8 +16,6 @@ namespace Game.Controllers
         {
             _transportLoader = transportLoader;
             _transportModel = transportModel;
-            _transportView = _transportLoader.Spawn<TransportView>(_transportModel.Type, new Vector3(0f, 1.25f, 0f), Quaternion.identity);
-            AddGameObject(_transportView.gameObject);
         }
     }
 }

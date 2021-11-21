@@ -1,21 +1,17 @@
-namespace Game.Models
+namespace Game.Transport
 {
-    internal class TransportModel
+    internal class TransportModel : ITransportModel
     {
-        private readonly TransportType _type;
-        private float _speed;
-        private float _jumpHeight;
-
-        public float JumpHeight => _jumpHeight;
-        public float Speed => _speed;
-        public TransportType Type => _type;
+        public float JumpHeight { get; set; }
+        public float Speed { get; set; }
+        public TransportType Type { get; set; }
 
 
         public TransportModel(TransportType type, float speed, float jumpHeight)
         {
-            _type = type;
-            _speed = speed;
-            _jumpHeight = jumpHeight;
+            Type = type;
+            Speed = speed;
+            JumpHeight = jumpHeight;
         }
     }
 }

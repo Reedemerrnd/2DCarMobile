@@ -1,4 +1,4 @@
-﻿using Game.Models;
+﻿using Game.Transport;
 
 namespace Game.Abilities
 {
@@ -6,9 +6,11 @@ namespace Game.Abilities
     {
         public PassiveAbilityType Type { get; protected set; }
 
-        public PassiveAbility(float value) : base(value)
+        public PassiveAbility(PassiveAbilityInfo abilityInfo)
         {
-
+            _value = abilityInfo.Value;
+            Type = abilityInfo.Type;
+            Icon = abilityInfo.Icon;
         }
     }
 }

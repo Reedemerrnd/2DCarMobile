@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Game.Views
+namespace Game.Transport
 {
     internal class CarView : TransportView
     {

@@ -1,6 +1,6 @@
 ﻿namespace Game.Utils
 {
-    internal interface IResourceLoader : ITransportLoader, IUILoader, IInputLoader, ILoadLevels
+    internal interface IResourceLoader : ITransportLoader, IUILoader, IInputLoader, ILoadLevels, ILoadAbilities
     {
 
     }

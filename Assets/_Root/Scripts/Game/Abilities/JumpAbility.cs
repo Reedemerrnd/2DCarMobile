@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Game.Transport;
+using UnityEngine;
 
 namespace Game.Abilities
 {
-    class JumpAbility { 
+    internal sealed class JumpAbility : ActiveAbility
+    {
+        public JumpAbility(ActiveAbilityInfo abilityInfo) : base(abilityInfo)
+        {
+        }
+
+        public override void Apply(ITransportView target, float valueMod = 1)
+        {
+            target.Rigidbody.AddForce(Vector2.up * _value * valueMod);
+        }
     }
-    
+
 }

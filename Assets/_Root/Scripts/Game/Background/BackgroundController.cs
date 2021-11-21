@@ -1,8 +1,9 @@
-using Game.Models;
+using Game.Controllers;
+using Game.Transport;
 using Game.Utils;
 using Game.Views;
 
-namespace Game.Controllers
+namespace Game
 {
     internal class BackgroundController : BaseController
     {
