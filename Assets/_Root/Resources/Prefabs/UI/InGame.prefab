@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _activeAbilityButton: {fileID: 103761517395463686}
+  _icon: {fileID: 103761517395463681}
 --- !u!1 &103761517395463687
 GameObject:
   m_ObjectHideFlags: 0

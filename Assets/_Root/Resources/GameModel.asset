@@ -15,5 +15,5 @@ MonoBehaviour:
   <State>k__BackingField: 1
   <TransportType>k__BackingField: 1
   <Speed>k__BackingField: 5
-  <JumpHeight>k__BackingField: 10
+  <JumpHeight>k__BackingField: 30
   <Input>k__BackingField: 1

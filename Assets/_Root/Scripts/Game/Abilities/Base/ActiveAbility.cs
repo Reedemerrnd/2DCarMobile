@@ -13,6 +13,12 @@ namespace Game.Abilities
                 _value = 0;
                 Type = ActiveAbilityType.None;
             }
+            else
+            {
+                _value = abilityInfo.Value;
+                Icon = abilityInfo.Icon;
+                Type = abilityInfo.Type;
+            }
         }
     }
 }
