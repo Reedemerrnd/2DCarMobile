@@ -8,8 +8,11 @@ namespace Game.Abilities
 
         public ActiveAbility(ActiveAbilityInfo abilityInfo)
         {
-            _value = abilityInfo.Value;
-            Type = abilityInfo.Type;
+            if(abilityInfo == null)
+            {
+                _value = 0;
+                Type = ActiveAbilityType.None;
+            }
         }
     }
 }

@@ -1,4 +1,3 @@
-using Game.Utils;
 using UnityEngine;
 
 namespace Game.Models
@@ -10,7 +9,7 @@ namespace Game.Models
 
         [field: SerializeField] public TransportType TransportType { get; private set; }
         [field: SerializeField] public float Speed { get; private set; }
-
+        [field: SerializeField] public float JumpHeight { get; private set; }
         [field: SerializeField] public InputType Input { get; private set; }
     }
 }

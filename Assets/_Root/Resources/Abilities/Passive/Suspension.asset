@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0471708111e2003468d655380bcb90c6, type: 3}
   m_Name: Suspension
   m_EditorClassIdentifier: 
+  <ID>k__BackingField: Suspension
   <Type>k__BackingField: 1
   <Value>k__BackingField: 10
   <Icon>k__BackingField: {fileID: 21300000, guid: a03a39af61d16d94298132cfd5437225, type: 3}

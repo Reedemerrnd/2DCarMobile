@@ -18,13 +18,14 @@ namespace Game.Controllers
             _gameModel = gameModel;
             _view = _uIloader.Spawn<MainMenuView>(UIType.MainMenu, Vector3.zero, Quaternion.identity);
             AddGameObject(_view.gameObject);
-            _view.Init(StarGame, OpenSettings, PlayRewardableAd, BuyProduct);
+            _view.Init(StarGame, OpenSettings, PlayRewardableAd, BuyProduct, OpenGarage);
         }
 
         private void StarGame() => _gameModel.UpdateState(GameState.RunGame);
 
         private void OpenSettings() => _gameModel.UpdateState(GameState.SettingsMenu);
 
+        private void OpenGarage() => _gameModel.UpdateState(GameState.Garage);
 
         private void BuyProduct(string id)
         {
@@ -86,7 +87,6 @@ namespace Game.Controllers
         {
             Debug.Log("Rewarded succes");
             UnsubscribeRewardedAd();
-
         }
     }
 }

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <State>k__BackingField: 1
   <TransportType>k__BackingField: 1
-  <Speed>k__BackingField: 15
+  <Speed>k__BackingField: 5
+  <JumpHeight>k__BackingField: 10
   <Input>k__BackingField: 1

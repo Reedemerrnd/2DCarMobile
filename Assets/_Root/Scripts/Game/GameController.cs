@@ -52,14 +52,9 @@ namespace Game.Controllers
         //temp
         private void InitAbilities()
         {
-            _abilityModel = new AbilityModel();
             var abilityData = _resourceLoader.LoadAbilitiesData();
-            var factory = new AbilityFactory(abilityData);
-
-            _abilityModel.AddPassive(factory.GetPassiveAbility(PassiveAbilityType.LightWieghtBody));
-            _abilityModel.AddPassive(factory.GetPassiveAbility(PassiveAbilityType.Suspension));
-
-            _abilityModel.SetActive(factory.GetActiveAbility(ActiveAbilityType.Jump));
+            var factory = new AbilityFactory(_gameModel.Equipped, abilityData);
+            _abilityModel = new AbilityModel(factory.GetPassives(), factory.GetActiveAbility());
         }
 
         private IInput LoadInput()

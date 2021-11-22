@@ -6,6 +6,8 @@ namespace Game.Abilities
     {
         public DefaultActive(ActiveAbilityInfo abilityInfo = null) : base(abilityInfo)
         {
+            _value = 0;
+            Type = ActiveAbilityType.None;
         }
 
         public override void Apply(ITransportView target, float valueMod = 1f)

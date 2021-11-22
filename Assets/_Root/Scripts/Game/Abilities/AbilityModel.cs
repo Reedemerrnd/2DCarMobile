@@ -4,20 +4,17 @@ using System.Collections.Generic;
 
 namespace Game.Abilities
 {
-    [Serializable]
     internal class AbilityModel
     {
         private List<PassiveAbility> _passives;
         public ActiveAbility Active { get; private set; }
 
-        public AbilityModel()
+        public AbilityModel(IEnumerable<PassiveAbility> passives, ActiveAbility active)
         {
-            _passives = new List<PassiveAbility>();
+            _passives = new List<PassiveAbility>(passives);
+            Active = active;
         }
 
-        public void AddPassive(PassiveAbility passiveAbility) => _passives.Add(passiveAbility);
-
-        public void SetActive(ActiveAbility activeAbility) => Active = activeAbility;
 
         public void ApplyPassives(TransportModel transportModel)
         {
