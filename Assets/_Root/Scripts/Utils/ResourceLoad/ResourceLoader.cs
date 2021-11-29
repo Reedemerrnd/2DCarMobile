@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Game.Utils.ResourcesLoad;
 using Game.Views;
+using Game.Abilities;
 
 namespace Game.Utils
 {
@@ -35,6 +36,8 @@ namespace Game.Utils
             var prefab = Resources.Load<GameObject>($"Prefabs/Levels/Level{index}");
             return SpawnAndGetComponent<LevelBackgroundView>(prefab, Vector3.zero, Quaternion.identity);
         }
+
+        public AbilitiesData LoadAbilitiesData() => Resources.Load<AbilitiesData>("Abilities/AbilitiesData");
 
         private K SpawnAndGetComponent<K>(GameObject obj, Vector3 position, Quaternion rotation)
         {

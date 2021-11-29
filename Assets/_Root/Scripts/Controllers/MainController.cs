@@ -1,3 +1,4 @@
+using Game.Garage;
 using Game.Models;
 using Game.Utils;
 using Services.Ads.UnityAds;
@@ -12,6 +13,7 @@ namespace Game.Controllers
         private MainMenuController _mainMenuController;
         private GameController _gameController;
         private SettingsMenuController _settingsController;
+        private GarageController _garageController;
 
         public MainController(IGameModel gameModel, UnityAdsSettings unityAdsSettings, ProductLibrary productLibrary)
         {
@@ -40,6 +42,10 @@ namespace Game.Controllers
                     _settingsController = new SettingsMenuController(_resourceLoader, _gameModel);
                     AddController(_settingsController);
                     break;
+                case GameState.Garage:
+                    _garageController = new GarageController(_resourceLoader, _resourceLoader.LoadAbilitiesData(), _gameModel);
+                    AddController(_garageController);
+                    break;
                 default:
                     break;
             }
@@ -50,6 +56,7 @@ namespace Game.Controllers
             _settingsController?.Dispose();
             _mainMenuController?.Dispose();
             _gameController?.Dispose();
+            _garageController?.Dispose();
         }
 
         protected override void OnDispose()
