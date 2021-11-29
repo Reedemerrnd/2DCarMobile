@@ -1,28 +1,27 @@
-using Game.Utils;
-using UnityEngine;
+﻿using Game.Utils;
 
 namespace Game.Models
 {
-    [CreateAssetMenu(menuName = "Game/GameModel")]
-    internal class GameModel : ScriptableObject, IGameModel
+    internal class GameModel : IGameModel
     {
         private SubscriptionProperty<GameState> _state;
-
-        [Header("Transport settings")]
-        [SerializeField] private TransportType _transport;
-        [SerializeField] private float _speed;
-
-        [Header("InputSettings")]
-        [SerializeField] private InputType _input;
+        private TransportType _transport;
+        private float _speed;
+        private InputType _input;
 
         public IReadOnlySubscriptionProperty<GameState> State => _state;
         public TransportType TransportType => _transport;
         public float Speed => _speed;
         public InputType InputType => _input;
 
-        public void Init()
+
+        public GameModel(GameSettings gameSettings)
         {
             _state = new SubscriptionProperty<GameState>(GameState.MainMenu);
+            _state.Value = gameSettings.State;
+            _input = gameSettings.Input;
+            _speed = gameSettings.Speed;
+            _transport = gameSettings.TransportType;
         }
 
 
