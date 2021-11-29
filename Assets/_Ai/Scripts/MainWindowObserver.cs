@@ -11,6 +11,7 @@ namespace BattleScripts
         [SerializeField] private TMP_Text _countMoneyText;
         [SerializeField] private TMP_Text _countHealthText;
         [SerializeField] private TMP_Text _countPowerText;
+        [SerializeField] private TMP_Text _countWantedText;
 
         [Header("Enemy Stats")]
         [SerializeField] private TMP_Text _countPowerEnemyText;
@@ -27,16 +28,23 @@ namespace BattleScripts
         [SerializeField] private Button _addPowerButton;
         [SerializeField] private Button _minusPowerButton;
 
+        [Header("Wanted Buttons")]
+        [SerializeField] private Button _addWantedButton;
+        [SerializeField] private Button _minusWantedButton;
+
         [Header("Other Buttons")]
         [SerializeField] private Button _fightButton;
+        [SerializeField] private Button _skipButton;
 
         private int _allCountMoneyPlayer;
         private int _allCountHealthPlayer;
         private int _allCountPowerPlayer;
+        private int _allCountWantedPlayer;
 
         private DataPlayer _money;
         private DataPlayer _heath;
         private DataPlayer _power;
+        private DataPlayer _wanted;
 
         private Enemy _enemy;
 
@@ -48,6 +56,7 @@ namespace BattleScripts
             _money = CreateDataPlayer(DataType.Money);
             _heath = CreateDataPlayer(DataType.Health);
             _power = CreateDataPlayer(DataType.Power);
+            _wanted = CreateDataPlayer(DataType.Wanted);
 
             Subscribe();
         }
@@ -57,6 +66,7 @@ namespace BattleScripts
             DisposeDataPlayer(ref _money);
             DisposeDataPlayer(ref _heath);
             DisposeDataPlayer(ref _power);
+            DisposeDataPlayer(ref _wanted);
 
             Unsubscribe();
         }
@@ -88,7 +98,11 @@ namespace BattleScripts
             _addPowerButton.onClick.AddListener(IncreasePower);
             _minusPowerButton.onClick.AddListener(DecreasePower);
 
+            _addWantedButton.onClick.AddListener(IncreaseWanted);
+            _minusWantedButton.onClick.AddListener(DecreaseWanted);
+
             _fightButton.onClick.AddListener(Fight);
+            _skipButton.onClick.AddListener(Skip);
         }
 
         private void Unsubscribe()
@@ -102,7 +116,11 @@ namespace BattleScripts
             _addPowerButton.onClick.RemoveAllListeners();
             _minusPowerButton.onClick.RemoveAllListeners();
 
+            _addWantedButton.onClick.RemoveAllListeners();
+            _minusWantedButton.onClick.RemoveAllListeners();
+
             _fightButton.onClick.RemoveAllListeners();
+            _skipButton.onClick.RemoveAllListeners();
         }
 
 
@@ -114,6 +132,9 @@ namespace BattleScripts
 
         private void IncreasePower() => IncreaseValue(ref _allCountPowerPlayer, DataType.Power);
         private void DecreasePower() => DecreaseValue(ref _allCountPowerPlayer, DataType.Power);
+
+        private void IncreaseWanted() => IncreaseValue(ref _allCountWantedPlayer, DataType.Wanted);
+        private void DecreaseWanted() => DecreaseValue(ref _allCountWantedPlayer, DataType.Wanted);
 
         private void IncreaseValue(ref int value, DataType dataType) => AddToValue(ref value, 1, dataType);
         private void DecreaseValue(ref int value, DataType dataType) => AddToValue(ref value, -1, dataType);
@@ -136,6 +157,20 @@ namespace BattleScripts
 
             int enemyPower = _enemy.CalcPower();
             _countPowerEnemyText.text = $"Enemy Power {enemyPower}";
+
+            ActivateSkipButton();
+        }
+
+        private void ActivateSkipButton()
+        {
+            if(_allCountWantedPlayer <= 2)
+            {
+                _skipButton.interactable = true;
+            }
+            else
+            {
+                _skipButton.interactable = false;
+            }
         }
 
         private TMP_Text GetTextComponent(DataType dataType) =>
@@ -144,6 +179,7 @@ namespace BattleScripts
                 DataType.Money => _countMoneyText,
                 DataType.Health => _countHealthText,
                 DataType.Power => _countPowerText,
+                DataType.Wanted => _countWantedText,
                 _ => throw new ArgumentException($"Wrong {nameof(DataType)}")
             };
 
@@ -153,9 +189,15 @@ namespace BattleScripts
                 DataType.Money => _money,
                 DataType.Health => _heath,
                 DataType.Power => _power,
+                DataType.Wanted => _wanted,
                 _ => throw new ArgumentException($"Wrong {nameof(DataType)}")
             };
 
+
+        private void Skip()
+        {
+            Debug.Log($"<color=07FF00>Skipped!!!</color>");
+        }
 
         private void Fight()
         {
