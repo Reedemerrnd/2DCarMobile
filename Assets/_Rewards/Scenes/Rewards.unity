@@ -155,8 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef013f286702b494d89ea9fa109297f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <TimeCooldown>k__BackingField: 604800
-  <TimeDeadline>k__BackingField: 1209600
+  <RewardDelay>k__BackingField: 1
   <Rewards>k__BackingField:
   - <RewardType>k__BackingField: 0
     <IconCurrency>k__BackingField: {fileID: 21300000, guid: ebb747b49d08e06458a20c047fd4b0f7, type: 3}
@@ -821,7 +820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380217fe8854da74791fd4c906a3f660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dailyRewardView: {fileID: 17293160}
+  _timeRewardView: {fileID: 17293160}
 --- !u!4 &1132633242
 Transform:
   m_ObjectHideFlags: 0
