@@ -6,9 +6,9 @@ using Object = UnityEngine.Object;
 
 namespace Rewards
 {
-    internal class DailyRewardController
+    internal class TImeRewardController
     {
-        private readonly DailyRewardView _dailyRewardView;
+        private readonly TimeRewardView _dailyRewardView;
 
         private List<ContainerSlotRewardView> _slots;
         private Coroutine _coroutine;
@@ -17,7 +17,7 @@ namespace Rewards
         private bool _isInitialized;
 
 
-        public DailyRewardController(DailyRewardView generateLevelView)
+        public TImeRewardController(TimeRewardView generateLevelView)
         {
             _dailyRewardView = generateLevelView;
         }
@@ -199,6 +199,7 @@ namespace Rewards
         private void ResetTimer()
         {
             PlayerPrefs.DeleteAll();
+            CurrencyView.Instance.RefreshText();
         }
     }
 }

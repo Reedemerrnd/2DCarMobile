@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7402747994275114330}
-  - component: {fileID: 7979480310274708407}
+  - component: {fileID: 924826071110074967}
   m_Layer: 5
   m_Name: Container Slot Reward
   m_TagString: Untagged
@@ -41,7 +41,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 250, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7979480310274708407
+--- !u!114 &924826071110074967
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4415227658422298970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcef08678f2c4dd7a3ba7136b9690e95, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a6bcf3d0609c3241937a46e01f22367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _originalBackground: {fileID: 7004583045184807626}
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Day 1
+  m_text: Week 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
