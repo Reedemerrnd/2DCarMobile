@@ -11,9 +11,26 @@ namespace Rewards
         private const string CurrentSlotInActiveKey = nameof(CurrentSlotInActiveKey);
         private const string TimeGetRewardKey = nameof(TimeGetRewardKey);
 
+        private const float DayInSeconds = 86400;
+        private const float DayDeadlineInSeconds = DayInSeconds * 2;
+
+        private const float WeekInSeconds = 604800;
+        private const float WeekDeadlineInSeconds = WeekInSeconds * 2;
+
         [field: Header("Settings Time Get Reward")]
-        [field: SerializeField] public float TimeCooldown { get; private set; } = 86400;
-        [field: SerializeField] public float TimeDeadline { get; private set; } = 172800;
+        [field: SerializeField] public RewardDelayType RewardDelay { get; private set; }
+        public float TimeCooldown => RewardDelay switch
+        {
+            RewardDelayType.Daily => DayInSeconds,
+            RewardDelayType.Weekly => WeekInSeconds,
+            _ => DayInSeconds
+        };
+        public float TimeDeadline => RewardDelay switch
+        {
+            RewardDelayType.Daily => DayDeadlineInSeconds,
+            RewardDelayType.Weekly => WeekDeadlineInSeconds,
+            _ => DayDeadlineInSeconds
+        };
 
         [field: Header("Settings Rewards")]
         [field: SerializeField] public List<Reward> Rewards { get; private set; }

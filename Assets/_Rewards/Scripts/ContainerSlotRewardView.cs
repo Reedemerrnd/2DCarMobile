@@ -13,10 +13,17 @@ namespace Rewards
         [SerializeField] private TMP_Text _textDays;
         [SerializeField] private TMP_Text _countReward;
 
-        public void SetData(Reward reward, int countDay, bool isSelect)
+        public void SetData(Reward reward,RewardDelayType rewardDelay, int count, bool isSelect)
         {
             _iconCurrency.sprite = reward.IconCurrency;
-            _textDays.text = $"Week {countDay}";
+
+            _textDays.text = rewardDelay switch
+            {
+                RewardDelayType.Weekly => $"Week {count}",
+                RewardDelayType.Daily => $"Day {count}",
+                _ => $"Day {count}"
+            };
+
             _countReward.text = reward.CountCurrency.ToString();
 
             _originalBackground.gameObject.SetActive(!isSelect);

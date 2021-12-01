@@ -8,7 +8,7 @@ namespace Rewards
 {
     internal class TImeRewardController
     {
-        private readonly TimeRewardView _dailyRewardView;
+        private readonly TimeRewardView _timeRewardView;
 
         private List<ContainerSlotRewardView> _slots;
         private Coroutine _coroutine;
@@ -19,7 +19,7 @@ namespace Rewards
 
         public TImeRewardController(TimeRewardView generateLevelView)
         {
-            _dailyRewardView = generateLevelView;
+            _timeRewardView = generateLevelView;
         }
 
 
@@ -53,7 +53,7 @@ namespace Rewards
         {
             _slots = new List<ContainerSlotRewardView>();
 
-            for (int i = 0; i < _dailyRewardView.Rewards.Count; i++)
+            for (int i = 0; i < _timeRewardView.Rewards.Count; i++)
             {
                 ContainerSlotRewardView instanceSlot = CreateSlotRewardView();
                 _slots.Add(instanceSlot);
@@ -61,7 +61,7 @@ namespace Rewards
         }
 
         private ContainerSlotRewardView CreateSlotRewardView() =>
-            Object.Instantiate(_dailyRewardView.ContainerSlotRewardPrefab, _dailyRewardView.MountRootSlotsReward, false);
+            Object.Instantiate(_timeRewardView.ContainerSlotRewardPrefab, _timeRewardView.MountRootSlotsReward, false);
 
         private void DeinitSlots()
         {
@@ -73,14 +73,14 @@ namespace Rewards
 
 
         private void StartRewardsUpdating() =>
-            _coroutine = _dailyRewardView.StartCoroutine(RewardsStateUpdater());
+            _coroutine = _timeRewardView.StartCoroutine(RewardsStateUpdater());
 
         private void StopRewardsUpdating()
         {
             if (_coroutine == null)
                 return;
 
-            _dailyRewardView.StopCoroutine(_coroutine);
+            _timeRewardView.StopCoroutine(_coroutine);
             _coroutine = null;
         }
 
@@ -99,16 +99,16 @@ namespace Rewards
 
         private void RefreshRewardsState()
         {
-            bool gotRewardEarlier = _dailyRewardView.TimeGetReward.HasValue;
+            bool gotRewardEarlier = _timeRewardView.TimeGetReward.HasValue;
             if (!gotRewardEarlier)
             {
                 _isGetReward = true;
                 return;
             }
 
-            TimeSpan timeFromLastRewardGetting = DateTime.UtcNow - _dailyRewardView.TimeGetReward.Value;
-            bool isDeadlineElapsed = timeFromLastRewardGetting.Seconds >= _dailyRewardView.TimeDeadline;
-            bool isTimeToGetNewReward = timeFromLastRewardGetting.Seconds >= _dailyRewardView.TimeCooldown;
+            TimeSpan timeFromLastRewardGetting = DateTime.UtcNow - _timeRewardView.TimeGetReward.Value;
+            bool isDeadlineElapsed = timeFromLastRewardGetting.Seconds >= _timeRewardView.TimeDeadline;
+            bool isTimeToGetNewReward = timeFromLastRewardGetting.Seconds >= _timeRewardView.TimeCooldown;
 
             if (isDeadlineElapsed)
                 ResetRewardsState();
@@ -118,15 +118,15 @@ namespace Rewards
 
         private void ResetRewardsState()
         {
-            _dailyRewardView.TimeGetReward = null;
-            _dailyRewardView.CurrentSlotInActive = 0;
+            _timeRewardView.TimeGetReward = null;
+            _timeRewardView.CurrentSlotInActive = 0;
         }
 
 
         private void RefreshUi()
         {
-            _dailyRewardView.GetRewardButton.interactable = _isGetReward;
-            _dailyRewardView.TimerNewReward.text = GetTimerNewRewardText();
+            _timeRewardView.GetRewardButton.interactable = _isGetReward;
+            _timeRewardView.TimerNewReward.text = GetTimerNewRewardText();
             RefreshSlots();
         }
 
@@ -135,9 +135,9 @@ namespace Rewards
             if (_isGetReward)
                 return "The reward is ready to be received!";
 
-            if (_dailyRewardView.TimeGetReward.HasValue)
+            if (_timeRewardView.TimeGetReward.HasValue)
             {
-                DateTime nextClaimTime = _dailyRewardView.TimeGetReward.Value.AddSeconds(_dailyRewardView.TimeCooldown);
+                DateTime nextClaimTime = _timeRewardView.TimeGetReward.Value.AddSeconds(_timeRewardView.TimeCooldown);
                 TimeSpan currentClaimCooldown = nextClaimTime - DateTime.UtcNow;
                 string timeGetReward = $"{currentClaimCooldown.Days:D2}:{currentClaimCooldown.Hours:D2}:" +
                                        $"{currentClaimCooldown.Minutes:D2}:{currentClaimCooldown.Seconds:D2}";
@@ -152,25 +152,25 @@ namespace Rewards
         {
             for (var i = 0; i < _slots.Count; i++)
             {
-                Reward reward = _dailyRewardView.Rewards[i];
-                int countDay = i + 1;
-                bool isSelect = i == _dailyRewardView.CurrentSlotInActive;
+                Reward reward = _timeRewardView.Rewards[i];
+                int count = i + 1;
+                bool isSelect = i == _timeRewardView.CurrentSlotInActive;
 
-                _slots[i].SetData(reward, countDay, isSelect);
+                _slots[i].SetData(reward,_timeRewardView.RewardDelay, count, isSelect);
             }
         }
 
 
         private void SubscribeButtons()
         {
-            _dailyRewardView.GetRewardButton.onClick.AddListener(ClaimReward);
-            _dailyRewardView.ResetButton.onClick.AddListener(ResetTimer);
+            _timeRewardView.GetRewardButton.onClick.AddListener(ClaimReward);
+            _timeRewardView.ResetButton.onClick.AddListener(ResetTimer);
         }
 
         private void UnsubscribeButtons()
         {
-            _dailyRewardView.GetRewardButton.onClick.RemoveListener(ClaimReward);
-            _dailyRewardView.ResetButton.onClick.RemoveListener(ResetTimer);
+            _timeRewardView.GetRewardButton.onClick.RemoveListener(ClaimReward);
+            _timeRewardView.ResetButton.onClick.RemoveListener(ResetTimer);
         }
 
         private void ClaimReward()
@@ -178,7 +178,7 @@ namespace Rewards
             if (!_isGetReward)
                 return;
 
-            Reward reward = _dailyRewardView.Rewards[_dailyRewardView.CurrentSlotInActive];
+            Reward reward = _timeRewardView.Rewards[_timeRewardView.CurrentSlotInActive];
 
             switch (reward.RewardType)
             {
@@ -190,8 +190,8 @@ namespace Rewards
                     break;
             }
 
-            _dailyRewardView.TimeGetReward = DateTime.UtcNow;
-            _dailyRewardView.CurrentSlotInActive++;
+            _timeRewardView.TimeGetReward = DateTime.UtcNow;
+            _timeRewardView.CurrentSlotInActive++;
 
             RefreshRewardsState();
         }
