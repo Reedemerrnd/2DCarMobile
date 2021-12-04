@@ -9,24 +9,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="ability core refactoring">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/IInGameView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/IInGameView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/AbilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/AbilityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/AbilityFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/AbilityFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/AbilityInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/AbilityInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/IInGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/IInGameUIView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/IInGameView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/IInGameUIView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/InGameUIView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/InGameUIView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Transport/TransportController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Transport/TransportController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Garage/GarageController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Garage/GarageController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Garage/GarageView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Garage/GarageView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Garage/IGarageView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Garage/IGarageView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Garage/IInventoryModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Garage/IInventoryModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Garage/InventoryModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Garage/InventoryModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Garage/IItemView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Garage/IItemView.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/MainMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/MainMenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/MainMenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/MainMenuView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1638606243241</updated>
       <workItem from="1638606246951" duration="3213000" />
-      <workItem from="1638609549752" duration="10432000" />
+      <workItem from="1638609549752" duration="11187000" />
     </task>
     <task id="LOCAL-00001" summary="ability core refactoring">
       <created>1638615555052</created>

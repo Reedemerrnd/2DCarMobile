@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace Game
 {
-    internal interface IInGameView
+    internal interface IInGameUIView
     {
         Button ActiveAbilityButton { get; }
 

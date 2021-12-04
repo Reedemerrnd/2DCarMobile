@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Game
 {
-    internal class InGameUIView : MonoBehaviour, IInGameView
+    internal class InGameUIView : MonoBehaviour, IInGameUIView
     {
         [SerializeField] private Button _activeAbilityButton;
         [SerializeField] private Image _icon;
