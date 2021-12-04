@@ -1,8 +1,7 @@
-using Game.Abilities;
 using System;
 using System.Collections.Generic;
+using Game.Abilities;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Game.Garage
@@ -18,61 +17,63 @@ namespace Game.Garage
         private readonly Dictionary<string, ItemView> _itemViews = new Dictionary<string, ItemView>();
 
 
+        public Button BackButton => _backButton;
+
         private void OnDestroy()
         {
             _backButton.onClick.RemoveAllListeners();
             Clear();
         }
 
-        public void Init(UnityAction backButtonHandler)
-        {
-            _backButton.onClick.AddListener(backButtonHandler);
-        }
-
-        public void DisplayPassives(IEnumerable<IAbilityInfo> itemsCollection, Action<string> itemClicked)
+        public void DisplayPassives(IEnumerable<IAbilityInfo> itemsCollection, Action<IAbilityInfo> itemClicked)
         {
             DisplayItems(itemsCollection, itemClicked, _placeForPassives);
         }
 
-        public void DisplayActives(IEnumerable<IAbilityInfo> itemsCollection, Action<string> itemClicked)
+        public void DisplayActives(IEnumerable<IAbilityInfo> itemsCollection, Action<IAbilityInfo> itemClicked)
         {
             DisplayItems(itemsCollection, itemClicked, _placeForActives);
         }
 
 
-        private void DisplayItems(IEnumerable<IAbilityInfo> itemsCollection, Action<string> itemClicked, Transform place)
+        private void DisplayItems(IEnumerable<IAbilityInfo> itemsCollection, Action<IAbilityInfo> itemClicked,
+            Transform place)
         {
             //Clear();
 
-            foreach (IAbilityInfo item in itemsCollection)
+            foreach (var item in itemsCollection)
                 _itemViews[item.ID] = CreateItemView(item, itemClicked, place);
         }
 
         public void Clear()
         {
-            foreach (ItemView itemView in _itemViews.Values)
+            foreach (var itemView in _itemViews.Values)
                 DestroyItemView(itemView);
 
             _itemViews.Clear();
         }
 
 
-        public void Select(string id) =>
-            _itemViews[id].Select();
-
-        public void Unselect(string id) =>
-            _itemViews[id].Unselect();
-
-
-        private ItemView CreateItemView(IAbilityInfo item, Action<string> itemClicked, Transform place)
+        public void Select(IAbilityInfo abilityInfo)
         {
-            GameObject objectView = Instantiate(_itemViewPrefab, place, false);
-            ItemView itemView = objectView.GetComponent<ItemView>();
+            _itemViews[abilityInfo.ID].Select();
+        }
+
+        public void Unselect(IAbilityInfo abilityInfo)
+        {
+            _itemViews[abilityInfo.ID].Unselect();
+        }
+
+
+        private ItemView CreateItemView(IAbilityInfo item, Action<IAbilityInfo> itemClicked, Transform place)
+        {
+            var objectView = Instantiate(_itemViewPrefab, place, false);
+            var itemView = objectView.GetComponent<ItemView>();
 
             itemView.Init
             (
                 item,
-                () => itemClicked?.Invoke(item.ID)
+                () => itemClicked?.Invoke(item)
             );
 
             return itemView;
@@ -83,6 +84,5 @@ namespace Game.Garage
             itemView.Deinit();
             Destroy(itemView.gameObject);
         }
-
     }
 }

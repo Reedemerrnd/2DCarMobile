@@ -12,10 +12,11 @@ namespace Game.Transport
         private readonly TransportModel _transportModel;
         private readonly TransportView _transportView;
 
-        public TransportController(ITransportLoader transportLoader, TransportModel transportModel)
+        public TransportController(ITransportLoader transportLoader, TransportModel transportModel, TransportView transportView)
         {
             _transportLoader = transportLoader;
             _transportModel = transportModel;
+            _transportView = transportView;
         }
     }
 }

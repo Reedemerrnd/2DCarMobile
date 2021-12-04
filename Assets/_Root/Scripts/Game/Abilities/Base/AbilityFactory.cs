@@ -18,7 +18,7 @@ namespace Game.Abilities
 
         public ActiveAbility CreateActiveAbility()
         {
-            var ability = _abilitiesData.Actives.FirstOrDefault(a => a.ID == _equipped.Active);
+            var ability = _abilitiesData.Actives.FirstOrDefault(a => a.ID == _equipped.Active.ID);
             var type = ability == null ? ActiveAbilityType.None : ability.Type;
             return type switch
             {
@@ -28,7 +28,7 @@ namespace Game.Abilities
             };
         }
 
-        public IEnumerable<PassiveAbility> GetPassives()
+        public IEnumerable<PassiveAbility> CreatePassives()
         {
             var passives = new List<PassiveAbility>(_equipped.Passives.Count);
             foreach (var ability in _equipped.Passives) passives.Add(CreatePassiveAbility(ability));
@@ -36,9 +36,9 @@ namespace Game.Abilities
         }
 
 
-        private PassiveAbility CreatePassiveAbility(string id)
+        private PassiveAbility CreatePassiveAbility(IAbilityInfo abilityInfo)
         {
-            var ability = _abilitiesData.Passives.FirstOrDefault(a => a.ID == id);
+            var ability = _abilitiesData.Passives.FirstOrDefault(a => a.ID == abilityInfo.ID);
             var type = ability == null ? PassiveAbilityType.None : ability.Type;
             return type switch
             {

@@ -13,48 +13,43 @@ namespace Game.Controllers
     {
         private readonly IResourceLoader _resourceLoader;
         private readonly IGameModel _gameModel;
-        private readonly TransportView _carView;
-        private readonly IInput _input;
-        private readonly InGameUIView _uIView;
-        private AbilityModel _abilityModel;
 
         public GameController(IResourceLoader resourceLoader, IGameModel gameModel)
         {
             _resourceLoader = resourceLoader;
             _gameModel = gameModel;
 
-            _carView = _resourceLoader.Spawn<TransportView>(_gameModel.TransportType, new Vector3(0f, 1.25f, 0f), Quaternion.identity);
-            AddGameObject(_carView.gameObject);
+            var carView = _resourceLoader.Spawn<TransportView>(_gameModel.TransportType, new Vector3(0f, 1.25f, 0f), Quaternion.identity);
+            AddGameObject(carView.gameObject);
 
-            _input = LoadInput();
-            _input.Init();
+            var input = LoadInput();
+            input.Init();
 
-            _uIView = _resourceLoader.Spawn<InGameUIView>(UIType.InGame, Vector3.zero, Quaternion.identity);
-            AddGameObject(_uIView.gameObject);
-
+            var inGameUIView = _resourceLoader.Spawn<InGameUIView>(UIType.InGame, Vector3.zero, Quaternion.identity);
+            inGameUIView.InitAbility(_gameModel.Equipped.Active);
+            AddGameObject(inGameUIView.gameObject);
+            
             var transportModel = new TransportModel(_gameModel.TransportType, _gameModel.Speed, _gameModel.JumpHeight);
 
-            var backgroundController = new BackgroundController(_resourceLoader, _input, transportModel);
+            var backgroundController = new BackgroundController(_resourceLoader, input, transportModel);
             AddController(backgroundController);
 
-            var carController = new TransportController(_resourceLoader, transportModel);
+            var carController = new TransportController(_resourceLoader, transportModel, carView);
             AddController(carController);
 
-            InitAbilities();
-            //temp
-            var abiltyController = new AbilityController(_carView, transportModel, _uIView, _abilityModel);
+            var abilityModel = InitAbilityModel();
+            var abiltyController = new AbilityController(carView, transportModel, inGameUIView, abilityModel);
             AddController(abiltyController);
 
             AnalyticsManager.Instance.SendEvent("Game Started");
             UnityAdsService.Instance.InterstitialPlayer.Play();
         }
 
-        //temp
-        private void InitAbilities()
+        private AbilityModel InitAbilityModel()
         {
             var abilityData = _resourceLoader.LoadAbilitiesData();
             var factory = new AbilityFactory(_gameModel.Equipped, abilityData);
-            _abilityModel = new AbilityModel(factory.GetPassives(), factory.CreateActiveAbility());
+            return new AbilityModel(factory.CreatePassives(), factory.CreateActiveAbility());
         }
 
         private IInput LoadInput()

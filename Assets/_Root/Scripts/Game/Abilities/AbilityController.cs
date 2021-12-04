@@ -7,6 +7,7 @@ namespace Game.Abilities
     {
         private readonly AbilityModel _abilityModel;
         private readonly TransportModel _transportModel;
+        private readonly InGameUIView _inGameUI;
         private readonly ITransportView _transportView;
 
         public AbilityController(ITransportView transportView, TransportModel transportModel, InGameUIView inGameUI,
@@ -14,10 +15,11 @@ namespace Game.Abilities
         {
             _transportView = transportView;
             _transportModel = transportModel;
+            _inGameUI = inGameUI;
             _abilityModel = abilityModel;
 
             ApplyPassives();
-            inGameUI.InitView(_abilityModel.Active, ButtonHandler);
+            _inGameUI.ActiveAbilityButton.onClick.AddListener(ActiveButtonHandler);
         }
 
         private void ApplyPassives()
@@ -25,9 +27,15 @@ namespace Game.Abilities
             foreach (var passive in _abilityModel.Passives) passive.Apply(_transportView, _transportModel);
         }
 
-        private void ButtonHandler()
+        private void ActiveButtonHandler()
         {
             _abilityModel.Active.Apply(_transportView, _transportModel);
+        }
+
+        protected override void OnDispose()
+        {
+            _inGameUI.ActiveAbilityButton.onClick.RemoveListener(ActiveButtonHandler);
+            base.OnDispose();
         }
     }
 }

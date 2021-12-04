@@ -1,18 +1,17 @@
 
 using System.Collections.Generic;
+using Game.Abilities;
 
 namespace Game.Garage
 {
     internal interface IInventoryModel
     {
-        public IReadOnlyList<string> Passives { get; }
-        public string Active { get; }
+        public IReadOnlyList<IAbilityInfo> Passives { get; }
+        public IAbilityInfo Active { get; }
 
 
-        public void Equip(string ID);
-        public void UnEquip(string ID);
-        public bool IsEquipped(string ID);
-
-        public void SetActive(string ID);
+        public void Equip(IAbilityInfo abilityInfo);
+        public void UnEquip(IAbilityInfo abilityInfo);
+        public bool IsEquipped(IAbilityInfo abilityInfo);
     }
 }
