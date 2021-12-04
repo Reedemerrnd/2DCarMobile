@@ -792,12 +792,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e428bc1fb4b7e34baa6da7b76de4b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _productIdToBuy: Consumable01
-  _startButton: {fileID: 7593906977281008129}
-  _settingsButton: {fileID: 7593906976026200420}
-  _rewarAdButton: {fileID: 6715272978070396770}
-  _buyButton: {fileID: 4417470827654819937}
-  _garageButton: {fileID: 7680697542385162298}
+  <StartButton>k__BackingField: {fileID: 7593906977281008129}
+  <SettingsButton>k__BackingField: {fileID: 7593906976026200420}
+  <RewardAdtButton>k__BackingField: {fileID: 6715272978070396770}
+  <BuyButton>k__BackingField: {fileID: 4417470827654819937}
+  <GarageButton>k__BackingField: {fileID: 7680697542385162298}
 --- !u!1 &7593906976565963777
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,14 @@ namespace Game
 
         public void InitAbility(IAbilityInfo abilityInfo)
         {
-            _activeAbilityButton.image.sprite = abilityInfo.Icon;
+            if (abilityInfo != null)
+            {
+                _icon.sprite = abilityInfo.Icon;
+            }
+            else
+            {
+                _activeAbilityButton.gameObject.SetActive(false);
+            }
         }
     }
 }

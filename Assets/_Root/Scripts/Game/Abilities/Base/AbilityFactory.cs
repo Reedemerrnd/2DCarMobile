@@ -18,7 +18,7 @@ namespace Game.Abilities
 
         public ActiveAbility CreateActiveAbility()
         {
-            var ability = _abilitiesData.Actives.FirstOrDefault(a => a.ID == _equipped.Active.ID);
+            var ability = _abilitiesData.Actives.FirstOrDefault(a => a.ID == _equipped.Active?.ID);
             var type = ability == null ? ActiveAbilityType.None : ability.Type;
             return type switch
             {
