@@ -54,7 +54,7 @@ namespace Game.Controllers
         {
             var abilityData = _resourceLoader.LoadAbilitiesData();
             var factory = new AbilityFactory(_gameModel.Equipped, abilityData);
-            _abilityModel = new AbilityModel(factory.GetPassives(), factory.GetActiveAbility());
+            _abilityModel = new AbilityModel(factory.GetPassives(), factory.CreateActiveAbility());
         }
 
         private IInput LoadInput()

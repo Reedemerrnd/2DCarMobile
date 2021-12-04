@@ -8,7 +8,7 @@ namespace Game.Abilities
         {
         }
 
-        public override void Apply(TransportModel target, float valueMod = 1f)
+        public override void Apply(ITransportView view, ITransportModel model)
         {
         }
     }

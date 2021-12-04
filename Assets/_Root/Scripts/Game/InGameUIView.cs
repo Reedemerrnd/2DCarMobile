@@ -13,7 +13,6 @@ namespace Game
         public void InitView(ActiveAbility ability, UnityAction buttonHandler)
         {
             _activeAbilityButton.onClick.AddListener(buttonHandler);
-            _icon.sprite = ability.Icon;
         }
 
         private void OnDisable()

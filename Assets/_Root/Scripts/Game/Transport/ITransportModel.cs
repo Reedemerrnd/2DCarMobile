@@ -2,8 +2,8 @@
 {
     internal interface ITransportModel
     {
-        public float Speed { get; }
-        public float JumpHeight { get; }
+        public float Speed { get; set; }
+        public float JumpHeight { get; set; }
         public TransportType Type { get; }
     }
 }

@@ -1,13 +1,10 @@
-﻿using Game.Transport;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Game.Abilities
 {
     internal class AbilityModel
     {
-        private List<PassiveAbility> _passives;
-        public ActiveAbility Active { get; private set; }
+        private readonly List<PassiveAbility> _passives;
 
         public AbilityModel(IEnumerable<PassiveAbility> passives, ActiveAbility active)
         {
@@ -15,15 +12,8 @@ namespace Game.Abilities
             Active = active;
         }
 
+        public IReadOnlyCollection<PassiveAbility> Passives => _passives;
 
-        public void ApplyPassives(TransportModel transportModel)
-        {
-            foreach (var passive in _passives)
-            {
-                passive.Apply(transportModel);
-            }
-        }
-
-
+        public ActiveAbility Active { get; }
     }
 }

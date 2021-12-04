@@ -2,13 +2,14 @@
 
 namespace Game.Abilities
 {
-    internal abstract class ActiveAbility : Ability<ITransportView>
-    {
-        public ActiveAbilityType Type { get; protected set; }
+    internal abstract class ActiveAbility : Ability<ITransportView, ITransportModel>
 
-        public ActiveAbility(ActiveAbilityInfo abilityInfo)
+    {
+        public ActiveAbilityType Type {  get; protected set; }
+
+        protected ActiveAbility(ActiveAbilityInfo abilityInfo)
         {
-            if(abilityInfo == null)
+            if (abilityInfo == null)
             {
                 _value = 0;
                 Type = ActiveAbilityType.None;
@@ -16,7 +17,6 @@ namespace Game.Abilities
             else
             {
                 _value = abilityInfo.Value;
-                Icon = abilityInfo.Icon;
                 Type = abilityInfo.Type;
             }
         }

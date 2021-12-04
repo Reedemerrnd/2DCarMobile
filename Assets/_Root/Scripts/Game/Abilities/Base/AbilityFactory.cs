@@ -1,13 +1,13 @@
-﻿using Game.Garage;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Game.Garage;
 
 namespace Game.Abilities
 {
     internal class AbilityFactory
     {
-        private readonly IInventoryModel _equipped;
         private readonly AbilitiesData _abilitiesData;
+        private readonly IInventoryModel _equipped;
 
         public AbilityFactory(IInventoryModel equipped, AbilitiesData abilitiesData)
         {
@@ -16,13 +16,13 @@ namespace Game.Abilities
         }
 
 
-        public ActiveAbility GetActiveAbility()
+        public ActiveAbility CreateActiveAbility()
         {
             var ability = _abilitiesData.Actives.FirstOrDefault(a => a.ID == _equipped.Active);
             var type = ability == null ? ActiveAbilityType.None : ability.Type;
             return type switch
             {
-                ActiveAbilityType.Jump => new JumpAbility(_abilitiesData.GetActiveInfo(type)),
+                ActiveAbilityType.Jump => new JumpAbility(ability),
                 ActiveAbilityType.None => new DefaultActive(),
                 _ => new DefaultActive()
             };
@@ -30,22 +30,20 @@ namespace Game.Abilities
 
         public IEnumerable<PassiveAbility> GetPassives()
         {
-            List<PassiveAbility> passives = new List<PassiveAbility>(_equipped.Passives.Count);
-            foreach (var ability in _equipped.Passives)
-            {
-                passives.Add(GetPassiveAbility(ability));
-            }
+            var passives = new List<PassiveAbility>(_equipped.Passives.Count);
+            foreach (var ability in _equipped.Passives) passives.Add(CreatePassiveAbility(ability));
             return passives;
         }
 
 
-        private PassiveAbility GetPassiveAbility(string id)
+        private PassiveAbility CreatePassiveAbility(string id)
         {
-            var type = _abilitiesData.Passives.FirstOrDefault(a => a.ID == id).Type;
+            var ability = _abilitiesData.Passives.FirstOrDefault(a => a.ID == id);
+            var type = ability == null ? PassiveAbilityType.None : ability.Type;
             return type switch
             {
-                PassiveAbilityType.LightWieghtBody => new LightWeightBody(_abilitiesData.GetPassiveInfo(type)),
-                PassiveAbilityType.Suspension => new Suspension(_abilitiesData.GetPassiveInfo(type)),
+                PassiveAbilityType.LightWieghtBody => new LightWeightBody(ability),
+                PassiveAbilityType.Suspension => new Suspension(ability),
                 PassiveAbilityType.None => new DefaultPassive(),
                 _ => new DefaultPassive()
             };

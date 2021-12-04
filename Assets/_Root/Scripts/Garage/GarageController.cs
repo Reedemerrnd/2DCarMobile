@@ -52,7 +52,7 @@ namespace Game.Garage
         {
             if (_inventory.IsEquipped(id))
             {
-                _inventory.Unequip(id);
+                _inventory.UnEquip(id);
                 _garageView.Unselect(id);
             }
             else
@@ -66,7 +66,7 @@ namespace Game.Garage
         {
             if (_inventory.IsEquipped(id))
             {
-                _inventory.Unequip(id);
+                _inventory.UnEquip(id);
                 _garageView.Unselect(id);
             }
             else

@@ -4,34 +4,30 @@ namespace Game.Garage
 {
     internal class InventoryModel : IInventoryModel
     {
-        private List<string> _passivesID;
+        private readonly List<string> _passivesID;
         private string _activeID;
 
         public IReadOnlyList<string> Passives => _passivesID;
         public string Active => _activeID;
-        
-        public InventoryModel()
+
+        public InventoryModel() => _passivesID = new List<string>();
+
+
+        public void Equip(string id) => _passivesID.Add(id);
+
+        public bool IsEquipped(string id) => _passivesID.Contains(id) || _activeID == id;
+
+        public void SetActive(string id) => _activeID = id;
+
+        public void UnEquip(string id)
         {
-            _passivesID = new List<string>();
-        }
-
-
-        public void Equip(string ID)
-        {
-            _passivesID.Add(ID);
-        }
-
-        public bool IsEquipped(string ID) => _passivesID.Contains(ID) || _activeID == ID;
-
-        public void SetActive(string ID) => _activeID = ID;
-        public void Unequip(string ID)
-        {
-            if (_activeID == ID)
+            if (_activeID == id)
             {
                 _activeID = string.Empty;
                 return;
             }
-            _passivesID.Remove(ID);
+
+            _passivesID.Remove(id);
         }
     }
 }

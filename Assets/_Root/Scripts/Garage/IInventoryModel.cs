@@ -10,7 +10,7 @@ namespace Game.Garage
 
 
         public void Equip(string ID);
-        public void Unequip(string ID);
+        public void UnEquip(string ID);
         public bool IsEquipped(string ID);
 
         public void SetActive(string ID);

@@ -10,7 +10,7 @@ namespace Game.Abilities
             Type = ActiveAbilityType.None;
         }
 
-        public override void Apply(ITransportView target, float valueMod = 1f)
+        public override void Apply(ITransportView target, ITransportModel model)
         {
         }
     }

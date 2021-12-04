@@ -4,15 +4,30 @@ using UnityEngine;
 
 namespace Game.Abilities
 {
-    [CreateAssetMenu (menuName = "Abilities/Data")]
+    [CreateAssetMenu(menuName = "Abilities/Data")]
     internal class AbilitiesData : ScriptableObject
     {
         [field: SerializeField] public List<PassiveAbilityInfo> Passives { get; private set; }
         [field: SerializeField] public List<ActiveAbilityInfo> Actives { get; private set; }
 
-        public PassiveAbilityInfo GetPassiveInfo(PassiveAbilityType type) => Passives.FirstOrDefault((a) => a.Type == type);
-        public PassiveAbilityInfo GetPassiveByID(string ID) => Passives.FirstOrDefault(a => a.ID == ID);
-        public ActiveAbilityInfo GetActiveByID(string ID) => Actives.FirstOrDefault(a => a.ID == ID);
-        public ActiveAbilityInfo GetActiveInfo(ActiveAbilityType type) => Actives.FirstOrDefault((a) => a.Type == type);
+        public PassiveAbilityInfo GetPassiveInfo(PassiveAbilityType type)
+        {
+            return Passives.FirstOrDefault(a => a.Type == type);
+        }
+
+        public PassiveAbilityInfo GetPassiveByID(string id)
+        {
+            return Passives.FirstOrDefault(a => a.ID == id);
+        }
+
+        public ActiveAbilityInfo GetActiveByID(string id)
+        {
+            return Actives.FirstOrDefault(a => a.ID == id);
+        }
+
+        public ActiveAbilityInfo GetActiveInfo(ActiveAbilityType type)
+        {
+            return Actives.FirstOrDefault(a => a.Type == type);
+        }
     }
 }
