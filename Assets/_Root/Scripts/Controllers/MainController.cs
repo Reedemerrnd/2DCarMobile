@@ -10,10 +10,7 @@ namespace Game.Controllers
     {
         private readonly IGameModel _gameModel;
         private readonly ResourceLoader _resourceLoader;
-        private MainMenuController _mainMenuController;
-        private GameController _gameController;
-        private SettingsMenuController _settingsController;
-        private GarageController _garageController;
+        private BaseController _currentController;
 
         public MainController(IGameModel gameModel, UnityAdsSettings unityAdsSettings, ProductLibrary productLibrary)
         {
@@ -27,40 +24,31 @@ namespace Game.Controllers
 
         private void GameStateChanged(GameState state)
         {
-            DisposeAllControllers();
+            _currentController.Dispose();
             switch (state)
             {
                 case GameState.MainMenu:
-                    _mainMenuController = new MainMenuController(_resourceLoader, _gameModel);
-                    AddController(_mainMenuController);
+                    _currentController = new MainMenuController(_resourceLoader, _gameModel);
                     break;
                 case GameState.RunGame:
-                    _gameController = new GameController(_resourceLoader, _gameModel);
-                    AddController(_gameController);
+                    _currentController = new GameController(_resourceLoader, _gameModel);
                     break;
                 case GameState.SettingsMenu:
-                    _settingsController = new SettingsMenuController(_resourceLoader, _gameModel);
-                    AddController(_settingsController);
+                    _currentController = new SettingsMenuController(_resourceLoader, _gameModel);
                     break;
                 case GameState.Garage:
-                    _garageController = new GarageController(_resourceLoader, _resourceLoader.LoadAbilitiesData(), _gameModel);
-                    AddController(_garageController);
+                    _currentController = new GarageController(_resourceLoader, _resourceLoader.LoadAbilitiesData(), _gameModel);
                     break;
                 default:
+                    _currentController.Dispose();
                     break;
             }
         }
 
-        private void DisposeAllControllers()
-        {
-            _settingsController?.Dispose();
-            _mainMenuController?.Dispose();
-            _gameController?.Dispose();
-            _garageController?.Dispose();
-        }
 
         protected override void OnDispose()
         {
+            _currentController.Dispose();
             _gameModel.State.UnSubscribeOnChange(GameStateChanged);
         }
     }

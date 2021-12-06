@@ -9,13 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="ability core refactoring">
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/TweenedUI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/TweenedUI/ShackingButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/TweenedUI/ShackingButton.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/InGame.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/InGame.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/MainMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/MainMenu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/MainController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/MainController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Services/Input/IInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Services/Input/IInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Services/Input/KeyboardInputView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Services/Input/KeyboardInputView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,10 +61,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="9184">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="9184" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -84,6 +82,7 @@
       <updated>1638606243241</updated>
       <workItem from="1638606246951" duration="3213000" />
       <workItem from="1638609549752" duration="11893000" />
+      <workItem from="1638816686062" duration="1067000" />
     </task>
     <task id="LOCAL-00001" summary="ability core refactoring">
       <created>1638615555052</created>
