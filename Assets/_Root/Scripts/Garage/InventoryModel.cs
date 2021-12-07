@@ -1,37 +1,41 @@
 using System.Collections.Generic;
+using Game.Abilities;
 
 namespace Game.Garage
 {
     internal class InventoryModel : IInventoryModel
     {
-        private List<string> _passivesID;
-        private string _activeID;
+        private readonly List<IAbilityInfo> _passivesID;
+        private IAbilityInfo _active;
 
-        public IReadOnlyList<string> Passives => _passivesID;
-        public string Active => _activeID;
-        
-        public InventoryModel()
+        public IReadOnlyList<IAbilityInfo> Passives => _passivesID;
+        public IAbilityInfo Active => _active;
+
+        public InventoryModel() => _passivesID = new List<IAbilityInfo>();
+
+
+        public void Equip(IAbilityInfo abilityInfo)
         {
-            _passivesID = new List<string>();
-        }
-
-
-        public void Equip(string ID)
-        {
-            _passivesID.Add(ID);
-        }
-
-        public bool IsEquipped(string ID) => _passivesID.Contains(ID) || _activeID == ID;
-
-        public void SetActive(string ID) => _activeID = ID;
-        public void Unequip(string ID)
-        {
-            if (_activeID == ID)
+            if (abilityInfo is ActiveAbilityInfo)
             {
-                _activeID = string.Empty;
+                _active = abilityInfo;
                 return;
             }
-            _passivesID.Remove(ID);
+
+            _passivesID.Add(abilityInfo);
+        }
+
+        public bool IsEquipped(IAbilityInfo abilityInfo) => _passivesID.Contains(abilityInfo) || _active?.ID == abilityInfo.ID;
+
+        public void UnEquip(IAbilityInfo abilityInfo)
+        {
+            if (_active.ID == abilityInfo.ID)
+            {
+                _active = null;
+                return;
+            }
+
+            _passivesID.Remove(abilityInfo);
         }
     }
 }

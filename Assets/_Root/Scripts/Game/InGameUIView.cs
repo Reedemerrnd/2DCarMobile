@@ -1,24 +1,28 @@
 using Game.Abilities;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Game
 {
-    internal class InGameUIView : MonoBehaviour
+    internal class InGameUIView : MonoBehaviour, IInGameUIView
     {
         [SerializeField] private Button _activeAbilityButton;
+        [SerializeField] private Button _startFightButton;
         [SerializeField] private Image _icon;
 
-        public void InitView(ActiveAbility ability, UnityAction buttonHandler)
-        {
-            _activeAbilityButton.onClick.AddListener(buttonHandler);
-            _icon.sprite = ability.Icon;
-        }
+        public Button ActiveAbilityButton => _activeAbilityButton;
+        public Button StartFightButton => _startFightButton;
 
-        private void OnDisable()
+        public void InitAbility(IAbilityInfo abilityInfo)
         {
-            _activeAbilityButton.onClick.RemoveAllListeners();
+            if (abilityInfo != null)
+            {
+                _icon.sprite = abilityInfo.Icon;
+            }
+            else
+            {
+                _activeAbilityButton.gameObject.SetActive(false);
+            }
         }
     }
 }
