@@ -7,9 +7,11 @@ namespace Game
     internal class InGameUIView : MonoBehaviour, IInGameUIView
     {
         [SerializeField] private Button _activeAbilityButton;
+        [SerializeField] private Button _startFightButton;
         [SerializeField] private Image _icon;
 
         public Button ActiveAbilityButton => _activeAbilityButton;
+        public Button StartFightButton => _startFightButton;
 
         public void InitAbility(IAbilityInfo abilityInfo)
         {

@@ -16,8 +16,10 @@ namespace Game.Controllers
         {
             _gameModel = gameModel;
             _resourceLoader = new ResourceLoader();
+            
             _gameModel.State.SubscribeOnChange(GameStateChanged);
             GameStateChanged(_gameModel.State.Value);
+            
             UnityAdsService.Instance.Init(unityAdsSettings);
             IAPService.Instance.InitializeProducts(productLibrary);
         }

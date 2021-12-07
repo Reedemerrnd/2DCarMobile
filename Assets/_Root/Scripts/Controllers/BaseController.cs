@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Game.Models;
 using UnityEngine;
 
 using Object = UnityEngine.Object;
@@ -62,5 +63,5 @@ namespace Game.Controllers
             _gameObjects ??= new List<GameObject>();
             _gameObjects.Add(gameObject);
         }
-    } 
+    }
 }
