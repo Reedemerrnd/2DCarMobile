@@ -8,6 +8,28 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="_Ai" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="DataPlayer.cs" t="Include" />
+            <e p="DataType.cs" t="Include" />
+            <e p="Enemy.cs" t="Include" />
+            <e p="IEnemy.cs" t="Include" />
+            <e p="MainWindowObserver.cs" t="Include" />
+          </e>
+        </e>
+        <e p="_Rewards" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="ContainerSlotRewardView.cs" t="Include" />
+            <e p="CurrencySlotView.cs" t="Include" />
+            <e p="CurrencyView.cs" t="Include" />
+            <e p="InstallView.cs" t="Include" />
+            <e p="Reward.cs" t="Include" />
+            <e p="RewardDelayType.cs" t="Include" />
+            <e p="RewardType.cs" t="Include" />
+            <e p="TImeRewardController.cs" t="Include" />
+            <e p="TimeRewardView.cs" t="Include" />
+          </e>
+        </e>
         <e p="_Root" t="Include">
           <e p="Scripts" t="Include">
             <e p="Controllers" t="Include">
@@ -39,6 +61,7 @@
               </e>
               <e p="Fight" t="Include">
                 <e p="FightController.cs" t="Include" />
+                <e p="FightUIView.cs" t="Include" />
               </e>
             </e>
             <e p="Game" t="Include">

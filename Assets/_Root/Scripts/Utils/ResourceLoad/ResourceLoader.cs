@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using Game.Utils.ResourcesLoad;
 using Game.Views;
 using Game.Abilities;
+using Object = UnityEngine.Object;
 
 namespace Game.Utils
 {
@@ -16,12 +18,12 @@ namespace Game.Utils
 
 
         public GameObject Load(UIType type) => Resources.Load<GameObject>(ResourcePath.UI[type]);
-        public K Spawn<K>(UIType type, Vector3 position, Quaternion rotation)
+        public K Spawn<K>(UIType type, Vector3 position = default(Vector3), Quaternion rotation = default(Quaternion))
         {
             var prefab = Load(type);
             return SpawnAndGetComponent<K>(prefab, position, rotation);
         }
-       
+
 
         public GameObject Load(InputType type) => Resources.Load<GameObject>(ResourcePath.Input[type]);
         public K Spawn<K>(InputType type, Vector3 position, Quaternion rotation)

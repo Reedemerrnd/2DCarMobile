@@ -163,7 +163,7 @@ namespace BattleScripts
 
         private void ActivateSkipButton()
         {
-            if(_allCountWantedPlayer <= 2)
+            if(_allCountWantedPlayer <= 2 && _allCountWantedPlayer >= 0)
             {
                 _skipButton.interactable = true;
             }

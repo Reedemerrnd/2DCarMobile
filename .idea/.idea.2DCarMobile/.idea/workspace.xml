@@ -27,58 +27,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="ability core refactoring">
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightUIView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightUIView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/BaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/BaseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Ai/Scenes/AITestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Ai/Scenes/AITestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Ai/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Ai/Scripts/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Ai/Scripts/MainWindowObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Ai/Scripts/MainWindowObserver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/InGame.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/InGame.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/MainController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/MainController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/AbilitiesData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/AbilitiesData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/AbilitiesData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/AbilitiesData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/AbilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/AbilityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/AbilityController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/AbilityController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/AbilityModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/AbilityModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/AbilityModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/AbilityModel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/Ability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/Ability.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/Ability.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/Ability.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/AbilityData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/AbilityData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/AbilityData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/AbilityData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/AbilityFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/AbilityFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/AbilityFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/AbilityFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/ActiveAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/ActiveAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/ActiveAbility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/ActiveAbility.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/ActiveAbilityInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/ActiveAbilityInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/ActiveAbilityInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/ActiveAbilityInfo.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/ActiveAbilityType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/ActiveAbilityType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/ActiveAbilityType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/ActiveAbilityType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/DefaultActive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/DefaultActive.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/DefaultActive.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/DefaultActive.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/DefaultPassive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/DefaultPassive.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/DefaultPassive.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/DefaultPassive.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/IAbilityInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/IAbilityInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/IAbilityInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/IAbilityInfo.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/PassiveAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/PassiveAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/PassiveAbility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/PassiveAbility.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/PassiveAbilityInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/PassiveAbilityInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/PassiveAbilityInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/PassiveAbilityInfo.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/PassiveAbilityType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/PassiveAbilityType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Base/PassiveAbilityType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Base/PassiveAbilityType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/JumpAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/JumpAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/JumpAbility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/JumpAbility.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/LightWeightBody.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/LightWeightBody.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/LightWeightBody.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/LightWeightBody.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Suspension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Suspension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/Abilities/Suspension.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Abilities/Suspension.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/IInGameUIView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/IInGameUIView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/InGameUIView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/InGameUIView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/GameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/GameModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/GameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/UIType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/UIType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourceLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourceLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourcePath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourcePath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,12 +65,19 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/_Root/Scripts/GameModel.cs" />
         <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/BaseController.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/MainController.cs" />
         <option value="$PROJECT_DIR$/Assets/_Root/Scripts/GameState.cs" />
         <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Game/IInGameUIView.cs" />
         <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Game/InGameUIView.cs" />
         <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Game/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Ai/Scripts/MainWindowObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightUIView.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/UI/UIType.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourcePath.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourceLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IResourceLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/MainController.cs" />
         <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Ai/Scripts/Enemy.cs" />
       </list>
     </option>
   </component>
@@ -164,6 +135,7 @@
       <workItem from="1638609549752" duration="11893000" />
       <workItem from="1638816686062" duration="1067000" />
       <workItem from="1638860964607" duration="2144000" />
+      <workItem from="1638863518011" duration="5062000" />
     </task>
     <task id="LOCAL-00001" summary="ability core refactoring">
       <created>1638615555052</created>
@@ -199,10 +171,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="ability core refactoring" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2381" y="165" key="SettingsEditor" timestamp="1638861435700">
+    <state x="2647" y="244" key="RiderGenerateDialog" timestamp="1638864009873">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2381" y="165" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1638861435700" />
+    <state x="2647" y="244" key="RiderGenerateDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1638864009873" />
+    <state x="2381" y="165" key="SettingsEditor" timestamp="1638879734150">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2381" y="165" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1638879734150" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1638864572549">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1638864572549" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
