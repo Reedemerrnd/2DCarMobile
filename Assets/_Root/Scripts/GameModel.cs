@@ -20,6 +20,7 @@ namespace Game.Models
         public InputType InputType => _input;
         public IInventoryModel Equipped => _inventoryModel;
         
+        
 
         public GameModel(GameSettings gameSettings)
         {
