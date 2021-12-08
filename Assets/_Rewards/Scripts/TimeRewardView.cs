@@ -15,7 +15,7 @@ namespace Rewards
         private const float DayDeadlineInSeconds = DayInSeconds * 2;
 
         private const float WeekInSeconds = 604800;
-        private const float WeekDeadlineInSeconds = WeekInSeconds * 2;
+        private const float WeekDeadlineInSeconds = WeekInSeconds * 3;
 
         [field: Header("Settings Time Get Reward")]
         [field: SerializeField] public RewardDelayType RewardDelay { get; private set; }

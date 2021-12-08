@@ -21,11 +21,11 @@
           <e p="Scripts" t="Include">
             <e p="ContainerSlotRewardView.cs" t="Include" />
             <e p="CurrencySlotView.cs" t="Include" />
+            <e p="CurrencyType.cs" t="Include" />
             <e p="CurrencyView.cs" t="Include" />
             <e p="InstallView.cs" t="Include" />
             <e p="Reward.cs" t="Include" />
             <e p="RewardDelayType.cs" t="Include" />
-            <e p="RewardType.cs" t="Include" />
             <e p="TImeRewardController.cs" t="Include" />
             <e p="TimeRewardView.cs" t="Include" />
           </e>
@@ -62,6 +62,12 @@
               <e p="Fight" t="Include">
                 <e p="FightController.cs" t="Include" />
                 <e p="FightUIView.cs" t="Include" />
+              </e>
+              <e p="TimeRewards" t="Include">
+                <e p="ICurrencyModel.cs" t="Include" />
+                <e p="PlayerPrefsCurrencyModel.cs" t="Include" />
+                <e p="RewardTimerModel.cs" t="Include" />
+                <e p="TImeRewardController.cs" t="Include" />
               </e>
             </e>
             <e p="Game" t="Include">

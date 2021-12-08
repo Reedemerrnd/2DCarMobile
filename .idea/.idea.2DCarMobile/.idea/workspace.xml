@@ -27,22 +27,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="ability core refactoring">
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightUIView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightUIView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/ICurrencyModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/ICurrencyModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/PlayerPrefsCurrencyModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/PlayerPrefsCurrencyModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/RewardTimerModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/RewardTimerModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/TimeRewardController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/TimeRewardController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Ai/Scenes/AITestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Ai/Scenes/AITestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Ai/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Ai/Scripts/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Ai/Scripts/MainWindowObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Ai/Scripts/MainWindowObserver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/InGame.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/InGame.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/MainController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/MainController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/UIType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/UIType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourceLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourceLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourcePath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourcePath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Rewards/Scripts/Reward.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Rewards/Scripts/Reward.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Rewards/Scripts/RewardType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Rewards/Scripts/CurrencyType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Rewards/Scripts/RewardType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Rewards/Scripts/CurrencyType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Rewards/Scripts/TImeRewardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Rewards/Scripts/TImeRewardController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Rewards/Scripts/TimeRewardView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Rewards/Scripts/TimeRewardView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +80,12 @@
         <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/MainController.cs" />
         <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightController.cs" />
         <option value="$PROJECT_DIR$/Assets/_Ai/Scripts/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Rewards/Scripts/CurrencyType.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/PlayerCurrencyModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/PlayerPrefsCurrencyModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Rewards/Scripts/TimeRewardView.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/TimeRewardController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/RewardTimerModel.cs" />
       </list>
     </option>
   </component>
@@ -135,7 +143,8 @@
       <workItem from="1638609549752" duration="11893000" />
       <workItem from="1638816686062" duration="1067000" />
       <workItem from="1638860964607" duration="2144000" />
-      <workItem from="1638863518011" duration="5062000" />
+      <workItem from="1638863518011" duration="5137000" />
+      <workItem from="1638962713453" duration="3791000" />
     </task>
     <task id="LOCAL-00001" summary="ability core refactoring">
       <created>1638615555052</created>
@@ -171,10 +180,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="ability core refactoring" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2647" y="244" key="RiderGenerateDialog" timestamp="1638864009873">
+    <state x="2647" y="244" key="RiderGenerateDialog" timestamp="1638963489347">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2647" y="244" key="RiderGenerateDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1638864009873" />
+    <state x="2647" y="244" key="RiderGenerateDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1638963489347" />
     <state x="2381" y="165" key="SettingsEditor" timestamp="1638879734150">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
