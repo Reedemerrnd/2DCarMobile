@@ -1,8 +1,9 @@
 using System;
+using UnityEngine;
 
 namespace Rewards
 {
-    internal class RewardTimerModel
+    internal class RewardTimerModel : IDisposable
     {
         private const float DAY_IN_SECONDS = 86400;
         private const float DAY_DEADLINE_IN_SECONDS = DAY_IN_SECONDS * 2;
@@ -13,21 +14,49 @@ namespace Rewards
         private DateTime? _lastDailyClaimTime;
         private DateTime? _lastWeeklyClaimTime;
 
+        private const string LAST_DAILY_CLAIM_TIME_KEY = nameof(_lastDailyClaimTime);
+        private const string LAST_WEEKLY_CLAIM_TIME_KEY = nameof(_lastWeeklyClaimTime);
+
         public event Action OnDailyTimerReset;
         public event Action OnWeeklyTimerReset; 
         
         public RewardTimerModel()
         {
-            
+            LoadClaimTimeStamps();
         }
-        
-        private bool CanGetReward(RewardDelayType delayType)
+
+        private void LoadClaimTimeStamps()
         {
-            return false;
+            var data = PlayerPrefs.GetString(LAST_DAILY_CLAIM_TIME_KEY, null);
+            _lastDailyClaimTime = !string.IsNullOrEmpty(data) ? (DateTime?) DateTime.Parse(data) : null;
+            
+            data = PlayerPrefs.GetString(LAST_WEEKLY_CLAIM_TIME_KEY, null);
+            _lastWeeklyClaimTime = !string.IsNullOrEmpty(data) ? (DateTime?) DateTime.Parse(data) : null;
+        }
+
+        private bool TryGetReward(RewardDelayType delayType) => delayType switch
+        {
+            RewardDelayType.Daily => TryClaimDaily(),
+            RewardDelayType.Weekly => TryClaimWeekly(),
+            _ => false
+        };
+
+        private bool TryClaimDaily()
+        {
+            var passed = CheckDailyTimer();
+            if(passed)
+                _lastDailyClaimTime = DateTime.UtcNow;
+            return passed;
         }
         
-        
-        
+        private bool TryClaimWeekly()
+        {
+            var passed = CheckWeeklyTimer();
+            if(passed)
+                _lastWeeklyClaimTime = DateTime.UtcNow;
+            return passed;
+        }
+
         private bool CheckDailyTimer()
         {
             if(_lastDailyClaimTime.HasValue)
@@ -71,6 +100,20 @@ namespace Rewards
                 _lastWeeklyClaimTime = null;
                 OnWeeklyTimerReset?.Invoke();
             }
+        }
+
+        private void SetPrefsValue(string key, string value)
+        {
+            if (value != null)
+                PlayerPrefs.SetString(key, value);
+            else
+                PlayerPrefs.DeleteKey(key);
+        }
+        
+        public void Dispose()
+        {
+            SetPrefsValue(LAST_DAILY_CLAIM_TIME_KEY, _lastDailyClaimTime.ToString());
+            SetPrefsValue(LAST_WEEKLY_CLAIM_TIME_KEY, _lastWeeklyClaimTime.ToString());
         }
     }
 }

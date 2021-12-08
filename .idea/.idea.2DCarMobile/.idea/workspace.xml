@@ -26,25 +26,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-
-    <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="ability core refactoring">
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/ICurrencyModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/ICurrencyModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/PlayerPrefsCurrencyModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/PlayerPrefsCurrencyModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/RewardTimerModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/RewardTimerModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/TimeRewardController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/TimeRewardController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Rewards/Scripts/Reward.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Rewards/Scripts/Reward.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Rewards/Scripts/RewardType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Rewards/Scripts/CurrencyType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Rewards/Scripts/RewardType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Rewards/Scripts/CurrencyType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Rewards/Scripts/TImeRewardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Rewards/Scripts/TImeRewardController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Rewards/Scripts/TimeRewardView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Rewards/Scripts/TimeRewardView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/RewardTimerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/RewardTimerModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,8 +105,9 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -126,8 +115,9 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -146,6 +136,7 @@
       <workItem from="1638860964607" duration="2144000" />
       <workItem from="1638863518011" duration="5137000" />
       <workItem from="1638962713453" duration="3791000" />
+      <workItem from="1638983531402" duration="1374000" />
     </task>
     <task id="LOCAL-00001" summary="ability core refactoring">
       <created>1638615555052</created>
@@ -179,20 +170,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="ability core refactoring" />
     <option name="LAST_COMMIT_MESSAGE" value="ability core refactoring" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="2647" y="244" key="RiderGenerateDialog" timestamp="1638963489347">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2647" y="244" key="RiderGenerateDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1638963489347" />
-    <state x="2381" y="165" key="SettingsEditor" timestamp="1638879734150">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2381" y="165" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1638879734150" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1638864572549">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1638864572549" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
