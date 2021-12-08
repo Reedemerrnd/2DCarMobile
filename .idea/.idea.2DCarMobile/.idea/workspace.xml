@@ -26,6 +26,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="ability core refactoring">
       <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/ICurrencyModel.cs" afterDir="false" />
