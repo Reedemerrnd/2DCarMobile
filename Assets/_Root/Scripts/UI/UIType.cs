@@ -9,6 +9,7 @@
         Garage = 4,
         Fight = 5,
         Rewards = 6,
-        Currency = 7
+        Currency = 7,
+        PauseMenu = 8
     }
 }

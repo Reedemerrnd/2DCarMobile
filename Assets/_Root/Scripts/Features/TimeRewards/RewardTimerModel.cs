@@ -19,8 +19,7 @@ namespace Rewards
         private float _deadlineDelay;
         
         private DateTime? _lastClaimTime;
-
-        public event Action OnTimerReset;
+        
         public DateTime? LastClaimTime => _lastClaimTime;
         public float RewardCooldown => _rewardCooldown;
         public RewardDelayType DelayType => _delayType;
@@ -88,14 +87,14 @@ namespace Rewards
             if (isDeadlineExpired)
             {
                 _lastClaimTime = null;
-                OnTimerReset?.Invoke();
             }
         }
 
         public void ResetAll()
         {
-            PlayerPrefs.DeleteAll();
-            
+            SetPrefsValue(_delayType.ToString(), null);
+            SetPrefsValue(CURRENT_SLOT_IN_ACTIVE_KEY, 0.ToString());
+            LoadClaimTimeStamps();
         }
         
         private void SetPrefsValue(string key, string value)

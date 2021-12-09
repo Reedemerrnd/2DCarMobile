@@ -17,7 +17,9 @@ namespace Game.Utils.ResourcesLoad
             {UIType.InGame, $"Prefabs/UI/{UIType.InGame}" },
             {UIType.Garage, $"Prefabs/UI/{UIType.Garage}" },
             {UIType.Fight, $"Prefabs/UI/{UIType.Fight}" },
-            {UIType.Rewards, $"Prefabs/UI/{UIType.Rewards}" }
+            {UIType.Rewards, $"Prefabs/UI/{UIType.Rewards}" },
+            {UIType.Currency, $"Prefabs/UI/{UIType.Currency}" },
+            {UIType.PauseMenu, $"Prefabs/UI/{UIType.PauseMenu}" },
         };
 
         public static Dictionary<InputType, string> Input = new Dictionary<InputType, string>()

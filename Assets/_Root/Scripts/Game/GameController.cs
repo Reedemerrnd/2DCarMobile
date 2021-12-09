@@ -29,8 +29,9 @@ namespace Game.Controllers
             _inGameUIView = _resourceLoader.Spawn<InGameUIView>(UIType.InGame, Vector3.zero, Quaternion.identity);
             _inGameUIView.InitAbility(_gameModel.Equipped.Active);
             AddGameObject(_inGameUIView.gameObject);
-            _inGameUIView.StartFightButton.onClick.AddListener(StartFightHandler);
-            
+
+            var pauseController = new InGamePauseController(_inGameUIView, resourceLoader, gameModel);
+            AddController(pauseController);
             
             var transportModel = new TransportModel(_gameModel.TransportType, _gameModel.Speed, _gameModel.JumpHeight);
 
@@ -44,10 +45,23 @@ namespace Game.Controllers
             var abiltyController = new AbilityController(carView, transportModel, _inGameUIView, abilityModel);
             AddController(abiltyController);
 
+            SubscribeButtons();
+            
             AnalyticsManager.Instance.SendEvent("Game Started");
             UnityAdsService.Instance.InterstitialPlayer.Play();
         }
 
+        private void SubscribeButtons()
+        {
+            _inGameUIView.StartFightButton.onClick.AddListener(StartFightHandler);
+            _inGameUIView.BackButton.onClick.AddListener(OpenMainMenu);
+        }
+        private void UnSubscribeButtons()
+        {
+            _inGameUIView.StartFightButton.onClick.RemoveListener(StartFightHandler);
+            _inGameUIView.BackButton.onClick.RemoveListener(OpenMainMenu);
+        }
+        
         private AbilityModel InitAbilityModel()
         {
             var abilityData = _resourceLoader.LoadAbilitiesData();
@@ -63,14 +77,12 @@ namespace Game.Controllers
             return inputView.GetComponent<IInput>();
         }
 
-        private void StartFightHandler()
-        {
-            _gameModel.UpdateState(GameState.Fight);
-        }
+        private void StartFightHandler() => _gameModel.UpdateState(GameState.Fight);
+        private void OpenMainMenu() => _gameModel.UpdateState(GameState.MainMenu);
 
         protected override void OnDispose()
         {
-            _inGameUIView.StartFightButton.onClick.RemoveListener(StartFightHandler);
+            UnSubscribeButtons();
             base.OnDispose();
         }
     }

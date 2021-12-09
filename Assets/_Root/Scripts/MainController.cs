@@ -2,6 +2,7 @@ using Game.Fight;
 using Game.Garage;
 using Game.Models;
 using Game.Utils;
+using Rewards;
 using Services.Ads.UnityAds;
 using Services.IAP;
 
@@ -44,6 +45,9 @@ namespace Game.Controllers
                     break;
                 case GameState.Fight:
                     _currentController = new FightController(_gameModel, _resourceLoader);
+                    break;
+                case GameState.Rewards:
+                    _currentController = new TimeRewardController(_gameModel, _resourceLoader, RewardDelayType.Daily);
                     break;
                 default:
                     _currentController.Dispose();

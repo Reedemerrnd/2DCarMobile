@@ -51,6 +51,7 @@ namespace Rewards
             if (_isInitialized)
                 return;
             
+            InitCurrencyView();
             InitSlots();
             RefreshUi();
             StartRewardsUpdating();
@@ -63,6 +64,7 @@ namespace Rewards
         {
             _currencyModel.Diamond.SubscribeOnChange(_currencyView.SetDiamond);
             _currencyModel.Wood.SubscribeOnChange(_currencyView.SetWood);
+            ForceRefreshCurrencies();
         }
         private void DeInitCurrencyView()
         {
@@ -83,7 +85,7 @@ namespace Rewards
         {
             if (!_isInitialized)
                 return;
-
+            DeInitCurrencyView();
             DeinitSlots();
             StopRewardsUpdating();
             UnsubscribeButtons();
@@ -138,8 +140,12 @@ namespace Rewards
                 yield return waitForSecond;
             }
         }
-        
 
+        private void ForceRefreshCurrencies()
+        {
+            _currencyView.SetDiamond(_currencyModel.Diamond.Value);
+            _currencyView.SetWood(_currencyModel.Wood.Value);
+        }
 
         private void RefreshUi()
         {
@@ -209,11 +215,16 @@ namespace Rewards
         private void ResetTimer()
         {
             _rewardTimerModel.ResetAll();
+            _currencyModel.Reset();
+            ForceRefreshCurrencies();
+            RefreshUi();
         }
 
         protected override void OnDispose()
         {
-            UnsubscribeButtons();
+            _rewardTimerModel.Dispose();
+            _currencyModel.Save();
+            Deinit();
             base.OnDispose();
         }
     }

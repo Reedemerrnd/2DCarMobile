@@ -9,5 +9,8 @@ namespace Game
         IReadOnlySubscriptionProperty<int> Diamond { get; }
 
         void SetCurrency(CurrencyType type, int value);
+
+        void Save();
+        void Reset();
     }
 }

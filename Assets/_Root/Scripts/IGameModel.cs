@@ -6,5 +6,6 @@ namespace Game.Models
     {
         IInventoryModel Equipped { get; }
         ICurrencyModel Currencies { get; }
+        IPauseModel Pause { get; }
     }
 }

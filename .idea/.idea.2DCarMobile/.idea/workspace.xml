@@ -27,20 +27,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/CurrenciesView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/CurrenciesView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/TimeRewardsVIew.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/TimeRewardsVIew.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/PauseMenu.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/PauseMenu/IPauseModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/PauseMenu/IPauseModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/PauseMenu/InGamePauseController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/PauseMenu/InGamePauseController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/PauseMenu/PauseMenuView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/PauseMenu/PauseMenuView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/PauseMenu/PauseModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/PauseMenu/PauseModel.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/CurrencyWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/CurrencyWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/InGame.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/InGame.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/MainMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/MainMenu.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/RewardWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/RewardWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/Rewards.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/Rewards.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/Rewards.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/Rewards.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/BaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/BaseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/BaseController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/BaseController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/MainController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/MainController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/MainController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/MainController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/ICurrencyModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/ICurrencyModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/PlayerPrefsCurrencyModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/PlayerPrefsCurrencyModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/RewardTimerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/RewardTimerModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/TimeRewardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/TimeRewardController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/InGameUIView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/InGameUIView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/GameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/GameModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/IGameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/IGameModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/MainMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/MainMenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/MainMenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/MainMenuView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/UIType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/UIType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourcePath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourcePath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,10 +141,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17212">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="17212" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -145,7 +167,7 @@
       <workItem from="1638863518011" duration="5137000" />
       <workItem from="1638962713453" duration="3791000" />
       <workItem from="1638983531402" duration="1374000" />
-      <workItem from="1639059210922" duration="4056000" />
+      <workItem from="1639059210922" duration="8543000" />
     </task>
     <task id="LOCAL-00001" summary="ability core refactoring">
       <created>1638615555052</created>

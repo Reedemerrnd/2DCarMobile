@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Game
 {
-    internal class PlayerPrefsCurrencyModel : IDisposable, ICurrencyModel
+    internal class PlayerPrefsCurrencyModel : ICurrencyModel
     {
         private SubscriptionProperty<int> _wood;
         private SubscriptionProperty<int> _diamond;
@@ -25,6 +25,19 @@ namespace Game
             }
         }
 
+        public void Save()
+        {
+            PlayerPrefs.SetInt(CurrencyType.Wood.ToString(), _wood.Value);
+            PlayerPrefs.SetInt(CurrencyType.Diamond.ToString(), _diamond.Value);
+        }
+
+        public void Reset()
+        {
+            PlayerPrefs.SetInt(CurrencyType.Wood.ToString(), 0);
+            PlayerPrefs.SetInt(CurrencyType.Diamond.ToString(), 0);
+            _wood.Value = 0;
+            _diamond.Value = 0;
+        }
 
         public PlayerPrefsCurrencyModel()
         {
@@ -33,12 +46,6 @@ namespace Game
             
             _wood = new SubscriptionProperty<int>(wood);
             _diamond = new SubscriptionProperty<int>(diamond);
-        }
-
-        public void Dispose()
-        {
-            PlayerPrefs.SetInt(CurrencyType.Wood.ToString(), _wood.Value);
-            PlayerPrefs.SetInt(CurrencyType.Diamond.ToString(), _diamond.Value);
         }
     }
 }
