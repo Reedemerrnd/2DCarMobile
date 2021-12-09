@@ -1,4 +1,5 @@
 using Game.Utils;
+using Rewards;
 
 namespace Game
 {
@@ -6,5 +7,7 @@ namespace Game
     {
         IReadOnlySubscriptionProperty<int> Wood { get; }
         IReadOnlySubscriptionProperty<int> Diamond { get; }
+
+        void SetCurrency(CurrencyType type, int value);
     }
 }

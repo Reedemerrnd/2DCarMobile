@@ -27,12 +27,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/CurrenciesView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/CurrenciesView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/TimeRewardsVIew.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/TimeRewardsVIew.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/ICurrencyModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/ICurrencyModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/PlayerPrefsCurrencyModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/PlayerPrefsCurrencyModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/RewardTimerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/RewardTimerModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/TimeRewardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/TimeRewardController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/GameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/GameModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/IGameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/IGameModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/UIType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/UIType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,6 +104,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -137,6 +145,7 @@
       <workItem from="1638863518011" duration="5137000" />
       <workItem from="1638962713453" duration="3791000" />
       <workItem from="1638983531402" duration="1374000" />
+      <workItem from="1639059210922" duration="4056000" />
     </task>
     <task id="LOCAL-00001" summary="ability core refactoring">
       <created>1638615555052</created>

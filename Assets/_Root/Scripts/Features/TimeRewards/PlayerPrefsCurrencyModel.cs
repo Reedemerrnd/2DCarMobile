@@ -12,8 +12,20 @@ namespace Game
 
         public IReadOnlySubscriptionProperty<int> Wood => _wood;
         public IReadOnlySubscriptionProperty<int> Diamond => _diamond;
-        
-        
+        public void SetCurrency(CurrencyType type, int value)
+        {
+            switch (type)
+            {
+                case CurrencyType.Diamond:
+                    _diamond.Value += value;
+                    break;
+                case CurrencyType.Wood:
+                    _wood.Value += value;
+                    break;
+            }
+        }
+
+
         public PlayerPrefsCurrencyModel()
         {
             var wood = PlayerPrefs.GetInt(CurrencyType.Wood.ToString());
@@ -27,7 +39,6 @@ namespace Game
         {
             PlayerPrefs.SetInt(CurrencyType.Wood.ToString(), _wood.Value);
             PlayerPrefs.SetInt(CurrencyType.Diamond.ToString(), _diamond.Value);
-            PlayerPrefs.Save();
         }
     }
 }

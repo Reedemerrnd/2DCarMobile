@@ -10,98 +10,94 @@ namespace Rewards
 
         private const float WEEK_IN_SECONDS = 604800;
         private const float WEEK_DEADLINE_IN_SECONDS = WEEK_IN_SECONDS * 3;
-
-        private DateTime? _lastDailyClaimTime;
-        private DateTime? _lastWeeklyClaimTime;
-
-        private const string LAST_DAILY_CLAIM_TIME_KEY = nameof(_lastDailyClaimTime);
-        private const string LAST_WEEKLY_CLAIM_TIME_KEY = nameof(_lastWeeklyClaimTime);
-
-        public event Action OnDailyTimerReset;
-        public event Action OnWeeklyTimerReset; 
         
-        public RewardTimerModel()
+        private const string CURRENT_SLOT_IN_ACTIVE_KEY = nameof(CURRENT_SLOT_IN_ACTIVE_KEY);
+
+        private RewardDelayType _delayType;
+
+        private float _rewardCooldown;
+        private float _deadlineDelay;
+        
+        private DateTime? _lastClaimTime;
+
+        public event Action OnTimerReset;
+        public DateTime? LastClaimTime => _lastClaimTime;
+        public float RewardCooldown => _rewardCooldown;
+        public RewardDelayType DelayType => _delayType;
+        public int CurrentSlotInActive
         {
+            get => PlayerPrefs.GetInt(CURRENT_SLOT_IN_ACTIVE_KEY, 0);
+            set => PlayerPrefs.SetInt(CURRENT_SLOT_IN_ACTIVE_KEY, value);
+        }
+
+        public RewardTimerModel(RewardDelayType delayType)
+        {
+            _delayType = delayType;
+            SwitchDelayValues();
             LoadClaimTimeStamps();
         }
 
-        private void LoadClaimTimeStamps()
+        private void SwitchDelayValues()
         {
-            var data = PlayerPrefs.GetString(LAST_DAILY_CLAIM_TIME_KEY, null);
-            _lastDailyClaimTime = !string.IsNullOrEmpty(data) ? (DateTime?) DateTime.Parse(data) : null;
-            
-            data = PlayerPrefs.GetString(LAST_WEEKLY_CLAIM_TIME_KEY, null);
-            _lastWeeklyClaimTime = !string.IsNullOrEmpty(data) ? (DateTime?) DateTime.Parse(data) : null;
-        }
-
-        private bool TryGetReward(RewardDelayType delayType) => delayType switch
-        {
-            RewardDelayType.Daily => TryClaimDaily(),
-            RewardDelayType.Weekly => TryClaimWeekly(),
-            _ => false
-        };
-
-        private bool TryClaimDaily()
-        {
-            var passed = CheckDailyTimer();
-            if(passed)
-                _lastDailyClaimTime = DateTime.UtcNow;
-            return passed;
+            _rewardCooldown = _delayType switch
+            {
+                RewardDelayType.Daily => DAY_IN_SECONDS,
+                RewardDelayType.Weekly => WEEK_IN_SECONDS,
+                _ => DAY_IN_SECONDS
+            };
+            _deadlineDelay = _delayType switch
+            {
+                RewardDelayType.Daily => DAY_DEADLINE_IN_SECONDS,
+                RewardDelayType.Weekly => WEEK_DEADLINE_IN_SECONDS,
+                _ => DAY_DEADLINE_IN_SECONDS
+            };
         }
         
-        private bool TryClaimWeekly()
+        private void LoadClaimTimeStamps()
         {
-            var passed = CheckWeeklyTimer();
+            var data = PlayerPrefs.GetString(_delayType.ToString(), null);
+            _lastClaimTime = !string.IsNullOrEmpty(data) ? (DateTime?) DateTime.Parse(data) : null;
+        }
+
+        public bool ClaimReward()
+        {
+            var passed = IsTimerReady();
             if(passed)
-                _lastWeeklyClaimTime = DateTime.UtcNow;
+                _lastClaimTime = DateTime.UtcNow;
+            HandleDailyDeadline();
             return passed;
         }
 
-        private bool CheckDailyTimer()
+        public bool IsTimerReady()
         {
-            if(_lastDailyClaimTime.HasValue)
+            if(!_lastClaimTime.HasValue)
             {
                 return true;
             }
             
-            TimeSpan timeFromLastRewardGetting = DateTime.UtcNow - _lastDailyClaimTime.Value;
+            TimeSpan timeFromLastRewardGetting = DateTime.UtcNow - _lastClaimTime.Value;
             
-            HandleDailyDeadline(timeFromLastRewardGetting);
-            return timeFromLastRewardGetting.Seconds >= DAY_IN_SECONDS;
+            
+            return timeFromLastRewardGetting.Seconds >= _rewardCooldown;
         }
 
-        private void HandleDailyDeadline(TimeSpan timeFromLastRewardGetting)
+        private void HandleDailyDeadline()
         {
-            var isDeadlineExpired = timeFromLastRewardGetting.Seconds >= DAY_DEADLINE_IN_SECONDS;
+            TimeSpan timeFromLastRewardGetting = DateTime.UtcNow - _lastClaimTime.Value;
+            var isDeadlineExpired = timeFromLastRewardGetting.Seconds >= _deadlineDelay;
             if (isDeadlineExpired)
             {
-                _lastDailyClaimTime = null;
-                OnDailyTimerReset?.Invoke();
+                _lastClaimTime = null;
+                OnTimerReset?.Invoke();
             }
         }
 
-        private bool CheckWeeklyTimer()
+        public void ResetAll()
         {
-            if(_lastWeeklyClaimTime.HasValue)
-            {
-                return true;
-            }
+            PlayerPrefs.DeleteAll();
             
-            TimeSpan timeFromLastRewardGetting = DateTime.UtcNow - _lastWeeklyClaimTime.Value;
-            HandleWeeklyDeadline(timeFromLastRewardGetting);
-            return timeFromLastRewardGetting.Seconds >= WEEK_IN_SECONDS;
         }
-
-        private void HandleWeeklyDeadline(TimeSpan timeFromLastRewardGetting)
-        {
-            var isDeadlineExpired = timeFromLastRewardGetting.Seconds >= WEEK_DEADLINE_IN_SECONDS;
-            if (isDeadlineExpired)
-            {
-                _lastWeeklyClaimTime = null;
-                OnWeeklyTimerReset?.Invoke();
-            }
-        }
-
+        
         private void SetPrefsValue(string key, string value)
         {
             if (value != null)
@@ -112,8 +108,7 @@ namespace Rewards
         
         public void Dispose()
         {
-            SetPrefsValue(LAST_DAILY_CLAIM_TIME_KEY, _lastDailyClaimTime.ToString());
-            SetPrefsValue(LAST_WEEKLY_CLAIM_TIME_KEY, _lastWeeklyClaimTime.ToString());
+            SetPrefsValue(_delayType.ToString(), _lastClaimTime.ToString());
         }
     }
 }
