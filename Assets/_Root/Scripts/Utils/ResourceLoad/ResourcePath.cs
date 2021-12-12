@@ -4,6 +4,8 @@ namespace Game.Utils.ResourcesLoad
 {
     internal static class ResourcePath
     {
+        private const string _googleDiskUrl = "https://drive.google.com/uc?export=download&id=";
+        
         public static Dictionary<TransportType, string> Transport = new Dictionary<TransportType, string>()
         {
             {TransportType.Car, $"Prefabs/Transport/{TransportType.Car}" },
@@ -26,6 +28,9 @@ namespace Game.Utils.ResourcesLoad
         {
             {InputType.Keyboard, $"Prefabs/Input/InputView_{InputType.Keyboard}" },
         };
+        
+        public static string UiAssetBundleUrl = _googleDiskUrl+ "1cfqLgbXMdAGx9OmMVEE50AnF-wWcu8kU";
+        public static string AudioAssetBundleUrl =  _googleDiskUrl+ "1LVDwRLyrIVdP_dlFPB4DyY2BNRG3Avlr";
     }
 
 }

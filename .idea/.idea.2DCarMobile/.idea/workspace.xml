@@ -26,7 +26,29 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="" />
+    <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IInputLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IInputLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadAbilities.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadAbilities.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadLevels.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadLevels.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadResources.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadResources.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IResourceLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IResourceLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ITransportLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ITransportLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IUILoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IUILoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourceLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourceLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourcePath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourcePath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +64,12 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/06a41f52a598460f985cb20475c401853600/ee/e63628c8/UnityWebRequestAssetBundle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_AssetBundle_Adressables/Scripts/AssetBundles/AssetBundleLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/e9/c5195b93/AsyncTaskCache.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/80/34ba54e0/AsyncTaskMethodBuilder`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -104,10 +132,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17212">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="17212" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -131,6 +159,8 @@
       <workItem from="1638962713453" duration="3791000" />
       <workItem from="1638983531402" duration="1374000" />
       <workItem from="1639059210922" duration="8653000" />
+      <workItem from="1639221739926" duration="9235000" />
+      <workItem from="1639292415132" duration="2482000" />
     </task>
     <task id="LOCAL-00001" summary="ability core refactoring">
       <created>1638615555052</created>
