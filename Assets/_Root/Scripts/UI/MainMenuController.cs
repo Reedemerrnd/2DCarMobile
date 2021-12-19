@@ -27,6 +27,7 @@ namespace Game.Controllers
             _view.SettingsButton.onClick.AddListener(OpenSettings);
             _view.StartButton.onClick.AddListener(StarGame);
             _view.RewardAdtButton.onClick.AddListener(PlayRewardableAd);
+            _view.RewardsButton.onClick.AddListener(OpenRewards);
         }
         private void UnSubscribeButtons()
         {
@@ -35,6 +36,7 @@ namespace Game.Controllers
             _view.SettingsButton.onClick.RemoveListener(OpenSettings);
             _view.StartButton.onClick.RemoveListener(StarGame);
             _view.RewardAdtButton.onClick.RemoveListener(PlayRewardableAd);
+            _view.RewardsButton.onClick.RemoveListener(OpenRewards);
         }
         
         private void StarGame() => _gameModel.UpdateState(GameState.RunGame);
@@ -42,6 +44,8 @@ namespace Game.Controllers
         private void OpenSettings() => _gameModel.UpdateState(GameState.SettingsMenu);
 
         private void OpenGarage() => _gameModel.UpdateState(GameState.Garage);
+
+        private void OpenRewards() => _gameModel.UpdateState(GameState.Rewards);
 
         private void BuyProduct()
         {

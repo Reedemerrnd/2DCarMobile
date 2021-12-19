@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 4054515332
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: ui_graphics_resources
+      Dependencies: {}
+    Info_1:
+      Name: audio_resources
+      Dependencies: {}

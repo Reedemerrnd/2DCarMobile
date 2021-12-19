@@ -12,6 +12,8 @@ namespace Game.Models
         private InputType _input;
         private float _jumpHeight;
         private InventoryModel _inventoryModel;
+        private ICurrencyModel _currencyModel;
+        private readonly PauseModel _pauseModel;
 
         public IReadOnlySubscriptionProperty<GameState> State => _state;
         public TransportType TransportType => _transport;
@@ -19,8 +21,9 @@ namespace Game.Models
         public float JumpHeight => _jumpHeight;
         public InputType InputType => _input;
         public IInventoryModel Equipped => _inventoryModel;
-        
-        
+        public ICurrencyModel Currencies => _currencyModel;
+        public IPauseModel Pause => _pauseModel;
+
 
         public GameModel(GameSettings gameSettings)
         {
@@ -30,7 +33,10 @@ namespace Game.Models
             _speed = gameSettings.Speed;
             _jumpHeight = gameSettings.JumpHeight;
             _transport = gameSettings.TransportType;
+
+            _pauseModel = new PauseModel(1f);
             _inventoryModel = new InventoryModel();
+            _currencyModel = new PlayerPrefsCurrencyModel();
         }
 
 

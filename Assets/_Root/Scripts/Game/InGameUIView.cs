@@ -6,12 +6,13 @@ namespace Game
 {
     internal class InGameUIView : MonoBehaviour, IInGameUIView
     {
-        [SerializeField] private Button _activeAbilityButton;
-        [SerializeField] private Button _startFightButton;
+        [field: SerializeField] public Button ActiveAbilityButton { get; private set; }
+        [field: SerializeField] public Button StartFightButton { get; private set; }
+        [field: SerializeField] public Button PauseButton { get; private set; }
+        [field: SerializeField] public Button BackButton { get; private set; }
+        
         [SerializeField] private Image _icon;
-
-        public Button ActiveAbilityButton => _activeAbilityButton;
-        public Button StartFightButton => _startFightButton;
+        
 
         public void InitAbility(IAbilityInfo abilityInfo)
         {
@@ -21,7 +22,7 @@ namespace Game
             }
             else
             {
-                _activeAbilityButton.gameObject.SetActive(false);
+                ActiveAbilityButton.gameObject.SetActive(false);
             }
         }
     }

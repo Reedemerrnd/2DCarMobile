@@ -180,12 +180,12 @@ namespace Rewards
 
             Reward reward = _timeRewardView.Rewards[_timeRewardView.CurrentSlotInActive];
 
-            switch (reward.RewardType)
+            switch (reward.CurrencyType)
             {
-                case RewardType.Wood:
+                case CurrencyType.Wood:
                     CurrencyView.Instance.AddWood(reward.CountCurrency);
                     break;
-                case RewardType.Diamond:
+                case CurrencyType.Diamond:
                     CurrencyView.Instance.AddDiamond(reward.CountCurrency);
                     break;
             }
