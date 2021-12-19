@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: audio_resources
+  m_EditorClassIdentifier: 
+  m_GroupName: audio_resources
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 18378a132481a4548b02f2998ea26eea
+  m_SerializeEntries:
+  - m_GUID: 835d08c364b492a4c8660f01394b97d4
+    m_Address: Assets/_Root/Audio/click_button.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5dc99d70c35ac1f4f9332933788418a3, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 047562a2b39a2f34c9a400056f9911fa, type: 2}
+    - {fileID: 11400000, guid: 7832e74136ea36049b24fae028e331c0, type: 2}
