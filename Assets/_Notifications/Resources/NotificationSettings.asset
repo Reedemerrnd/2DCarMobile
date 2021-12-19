@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3958e8d3448454a99325266544d2f9, type: 3}
+  m_Name: NotificationSettings
+  m_EditorClassIdentifier: 
+  <Channels>k__BackingField:
+  - <Id>k__BackingField: default
+    <Name>k__BackingField: default
+    <Description>k__BackingField: default
+    _importance: 4
+  <Notifications>k__BackingField:
+  - <Id>k__BackingField: default1
+    <Title>k__BackingField: first
+    <Text>k__BackingField: first
+    <RepeatType>k__BackingField: 1
+    <FireTime>k__BackingField:
+      <Year>k__BackingField: 2021
+      <Month>k__BackingField: 12
+      <Day>k__BackingField: 19
+      <Hour>k__BackingField: 17
+      <Minute>k__BackingField: 0
+    <RepeatInterval>k__BackingField:
+      <Seconds>k__BackingField: 10
+  - <Id>k__BackingField: default2
+    <Title>k__BackingField: second
+    <Text>k__BackingField: second
+    <RepeatType>k__BackingField: 1
+    <FireTime>k__BackingField:
+      <Year>k__BackingField: 2021
+      <Month>k__BackingField: 12
+      <Day>k__BackingField: 19
+      <Hour>k__BackingField: 17
+      <Minute>k__BackingField: 0
+    <RepeatInterval>k__BackingField:
+      <Seconds>k__BackingField: 15

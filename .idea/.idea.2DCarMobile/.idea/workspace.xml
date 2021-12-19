@@ -26,21 +26,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Notifications/Script/AndroidNotificationScheduler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Notifications/Script/AndroidNotificationScheduler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Notifications/Script/INotificationScheduler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Notifications/Script/INotificationScheduler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Notifications/Script/IOSNotificationScheduler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Notifications/Script/IOSNotificationScheduler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Notifications/Script/NotificationSchedulerFActory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Notifications/Script/NotificationSchedulerFActory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Notifications/Script/NotificationSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Notifications/Script/NotificationSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Notifications/Script/NotificationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Notifications/Script/NotificationWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Notifications/Script/StubNotificationScheduler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Notifications/Script/StubNotificationScheduler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,7 +144,7 @@
       <workItem from="1639315252795" duration="181000" />
       <workItem from="1639315475834" duration="1165000" />
       <workItem from="1639503900979" duration="537000" />
-      <workItem from="1639910597152" duration="326000" />
+      <workItem from="1639910597152" duration="996000" />
     </task>
     <task id="LOCAL-00001" summary="ability core refactoring">
       <created>1638615555052</created>
