@@ -28,25 +28,17 @@
   <component name="ChangeListManager">
     <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IInputLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IInputLoader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadAbilities.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadAbilities.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadLevels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadLevels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadResources.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadResources.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IResourceLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IResourceLoader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ITransportLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ITransportLoader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IUILoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IUILoader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourceLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourceLoader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourcePath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourcePath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Notifications/Script/AndroidNotificationScheduler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Notifications/Script/AndroidNotificationScheduler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Notifications/Script/INotificationScheduler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Notifications/Script/INotificationScheduler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Notifications/Script/IOSNotificationScheduler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Notifications/Script/IOSNotificationScheduler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Notifications/Script/NotificationSchedulerFActory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Notifications/Script/NotificationSchedulerFActory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Notifications/Script/NotificationSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Notifications/Script/NotificationSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Notifications/Script/NotificationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Notifications/Script/NotificationWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Notifications/Script/StubNotificationScheduler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Notifications/Script/StubNotificationScheduler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,6 +153,12 @@
       <workItem from="1639059210922" duration="8653000" />
       <workItem from="1639221739926" duration="9235000" />
       <workItem from="1639292415132" duration="2482000" />
+      <workItem from="1639314227846" duration="308000" />
+      <workItem from="1639314563715" duration="546000" />
+      <workItem from="1639315252795" duration="181000" />
+      <workItem from="1639315475834" duration="1165000" />
+      <workItem from="1639503900979" duration="537000" />
+      <workItem from="1639910597152" duration="326000" />
     </task>
     <task id="LOCAL-00001" summary="ability core refactoring">
       <created>1638615555052</created>

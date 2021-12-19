@@ -1,8 +1,9 @@
+using Tool.PushNotifications.Settings;
 
-namespace Game
+namespace Tool.PushNotifications
 {
-    public interface INotificationScheduler
+    internal interface INotificationScheduler
     {
-
+        void ScheduleNotification(NotificationData notificationData);
     }
 }

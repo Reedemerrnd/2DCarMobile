@@ -1,9 +1,11 @@
-using System;
+using Tool.PushNotifications.Settings;
+using UnityEngine;
 
-namespace Game
+namespace Tool.PushNotifications
 {
-    public class StubNotificationScheduler
+    internal class StubNotificationScheduler : INotificationScheduler
     {
-
+        public void ScheduleNotification(NotificationData notificationData) =>
+            Debug.Log($"[{GetType()}] {notificationData}");
     }
 }

@@ -79,10 +79,3 @@ namespace Tool.PushNotifications.Settings
         public static implicit operator TimeSpan(Span span) => TimeSpan.FromSeconds(span.Seconds);
     }
 }
-
-namespace Unity
-{
-    internal class Notifications
-    {
-    }
-}

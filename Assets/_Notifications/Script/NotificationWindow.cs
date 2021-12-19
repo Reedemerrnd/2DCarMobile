@@ -1,21 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using Tool.PushNotifications;
+using Tool.PushNotifications.Settings;
 
-namespace Game
+namespace Tool.Notifications.Examples
 {
-    public class NotificationWindow : MonoBehaviour
+    internal class NotificationWindow : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        [Header("Settings")]
+        [SerializeField] private NotificationSettings _settings;
+
+        [Header("Scene Components")]
+        [SerializeField] private Button _buttonNotification;
+
+        private NotificationSchedulerFactory _factory;
+        private INotificationScheduler _scheduler;
+
+
+        private void Awake()
         {
-        
+            _factory = new NotificationSchedulerFactory(_settings);
+            _scheduler = _factory.CreateScheduler();
         }
 
-        // Update is called once per frame
-        void Update()
+        private void OnEnable() =>
+            _buttonNotification.onClick.AddListener(CreateNotification);
+
+        private void OnDisable() =>
+            _buttonNotification.onClick.RemoveAllListeners();
+
+        private void CreateNotification()
         {
-        
+            foreach (NotificationData notificationData in _settings.Notifications)
+                _scheduler.ScheduleNotification(notificationData);
         }
     }
 }
