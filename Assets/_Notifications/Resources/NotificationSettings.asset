@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: NotificationSettings
   m_EditorClassIdentifier: 
   <Channels>k__BackingField:
-  - <Id>k__BackingField: default
+  - <Id>k__BackingField: default1
+    <Name>k__BackingField: default
+    <Description>k__BackingField: default
+    _importance: 4
+  - <Id>k__BackingField: default2
     <Name>k__BackingField: default
     <Description>k__BackingField: default
     _importance: 4

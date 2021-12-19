@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UILocalization Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UILocalization
+  m_TableCollectionNameGuidString: a9232d917c784cf4f95f795b43914b71
+  m_Entries:
+  - m_Id: 152737021952
+    m_Key: StartButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 613162549248
+    m_Key: GarageButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 663372562432
+    m_Key: WatchAdButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 702715133952
+    m_Key: BuyButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 741873156096
+    m_Key: SettingsButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 772030201856
+    m_Key: RewardsButton
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1639923513294

@@ -16,21 +16,40 @@ MonoBehaviour:
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
+  m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
   m_IgnoreUnsupportedFilesInBuild: 0
   m_UniqueBundleIds: 0
+  m_NonRecursiveBuilding: 0
+  m_CCDEnabled: 0
   m_maxConcurrentWebRequests: 500
   m_ContiguousBundles: 0
+  m_StripUnityVersionFromBundleBuild: 0
+  m_DisableVisibleSubAssetRepresentations: 0
+  m_ShaderBundleNaming: 0
+  m_ShaderBundleCustomNaming: 
+  m_MonoScriptBundleNaming: 0
+  m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
     m_Id: 09518f4bdf936ae49ad5ecd270f67d6f
   m_RemoteCatalogLoadPath:
     m_Id: 204169f34c7dc104c971e11071c7f177
+  m_ContentStateBuildPath: 
+  m_BuildAddressablesWithPlayerBuild: 2
   m_overridePlayerVersion: 
   m_GroupAssets:
   - {fileID: 11400000, guid: 09f137edabfe2814e9fedbb98c7cfb84, type: 2}
   - {fileID: 11400000, guid: 21d4346a764a10045abffcc40f0b29cb, type: 2}
   - {fileID: 11400000, guid: 24d2be5aa1cad68478a652f73ca2aa3d, type: 2}
   - {fileID: 11400000, guid: 98301f20b742c8846af6ee1bea621235, type: 2}
+  - {fileID: 11400000, guid: 19baff89040e49448842f22505252f29, type: 2}
+  - {fileID: 11400000, guid: 211cc38bfc4746041a6bc6304edac37b, type: 2}
+  - {fileID: 11400000, guid: 616331007fbd5b54e80405107f24c940, type: 2}
+  - {fileID: 11400000, guid: 26b681aa27dc58948883239974b7f2a4, type: 2}
+  - {fileID: 11400000, guid: 3a42fd348e25f0e45a26c43cfcae5adc, type: 2}
+  - {fileID: 11400000, guid: 056dc5307a3802a41925970f87f7fcbc, type: 2}
+  - {fileID: 11400000, guid: 1e9c838424c937f43ad64b8e2f0a5483, type: 2}
+  - {fileID: 11400000, guid: 7288dc9c2ad092640a82c8fb76069207, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -72,6 +91,10 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
+    - Locale
+    - Locale-en
+    - Preload
+    - Locale-ru
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: e0a48aa35c604a547ad1e1a9969d04a6, type: 2}

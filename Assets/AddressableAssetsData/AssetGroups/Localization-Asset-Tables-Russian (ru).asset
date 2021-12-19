@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Default Local Group
+  m_Name: Localization-Asset-Tables-Russian (ru)
   m_EditorClassIdentifier: 
-  m_GroupName: Default Local Group
+  m_GroupName: Localization-Asset-Tables-Russian (ru)
   m_Data:
     m_SerializedData: []
-  m_GUID: 951653937404af24e8766c682c5ef745
+  m_GUID: 0bfdcbbadf4a1d943bc602255d5a095e
   m_SerializeEntries:
-  - m_GUID: dede5f4548992dd4ba1c9840a451ed31
-    m_Address: SkySprite
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  m_ReadOnly: 0
+  - m_GUID: 75675dd3c6f5c4847808bc1455e4708c
+    m_Address: UISprites_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    - Preload
+  m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 5dc99d70c35ac1f4f9332933788418a3, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 0f253439c28356142a6efe5a243cd4fb, type: 2}
-    - {fileID: 11400000, guid: 06907cf38ef3e7340a8013808e0cc88c, type: 2}
+    - {fileID: 11400000, guid: 7158d2bd548413f42b6a5e861ba06682, type: 2}
+    - {fileID: 11400000, guid: 8c8250480262b8549a1d33cb651dc355, type: 2}
