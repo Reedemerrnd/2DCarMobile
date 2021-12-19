@@ -10,5 +10,6 @@ namespace Game
         [field: SerializeField] public Button RewardAdtButton { get; private set; }
         [field: SerializeField] public Button BuyButton { get; private set; }
         [field: SerializeField] public Button GarageButton { get; private set; }
+        [field: SerializeField] public Button RewardsButton { get; private set; }
     }
 }

@@ -7,15 +7,47 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="ability core refactoring">
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/TweenedUI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/TweenedUI/ShackingButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/TweenedUI/ShackingButton.cs.meta" afterDir="false" />
+    <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/InGame.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/InGame.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/MainMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/MainMenu.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IInputLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IInputLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadAbilities.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadAbilities.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadLevels.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadLevels.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadResources.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ILoadResources.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IResourceLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IResourceLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ITransportLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ITransportLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IUILoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IUILoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourceLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourceLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourcePath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourcePath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +65,43 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/06a41f52a598460f985cb20475c401853600/ee/e63628c8/UnityWebRequestAssetBundle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_AssetBundle_Adressables/Scripts/AssetBundles/AssetBundleLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/e9/c5195b93/AsyncTaskCache.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/80/34ba54e0/AsyncTaskMethodBuilder`1.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/GameModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/BaseController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/GameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Game/IInGameUIView.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Game/InGameUIView.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Game/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Ai/Scripts/MainWindowObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightUIView.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/UI/UIType.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourcePath.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/ResourceLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Utils/ResourceLoad/IResourceLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Controllers/MainController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Features/Fight/FightController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Ai/Scripts/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Rewards/Scripts/CurrencyType.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/PlayerCurrencyModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/PlayerPrefsCurrencyModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Rewards/Scripts/TimeRewardView.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/TimeRewardController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Scripts/Features/TimeRewards/RewardTimerModel.cs" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="21oT3Qhh7YqHcVtFnGlbRCiJgSk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,6 +117,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -63,10 +132,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="9184">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="9184" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -84,6 +153,14 @@
       <updated>1638606243241</updated>
       <workItem from="1638606246951" duration="3213000" />
       <workItem from="1638609549752" duration="11893000" />
+      <workItem from="1638816686062" duration="1067000" />
+      <workItem from="1638860964607" duration="2144000" />
+      <workItem from="1638863518011" duration="5137000" />
+      <workItem from="1638962713453" duration="3791000" />
+      <workItem from="1638983531402" duration="1374000" />
+      <workItem from="1639059210922" duration="8653000" />
+      <workItem from="1639221739926" duration="9235000" />
+      <workItem from="1639292415132" duration="2482000" />
     </task>
     <task id="LOCAL-00001" summary="ability core refactoring">
       <created>1638615555052</created>
@@ -117,25 +194,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="ability core refactoring" />
     <option name="LAST_COMMIT_MESSAGE" value="ability core refactoring" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Root/Scripts/Game/InGameUIView.cs</url>
-          <line>15</line>
-          <properties documentPath="G:\Unity proj\Git\2DCarMobile\Assets\_Root\Scripts\Game\InGameUIView.cs" initialLine="15" containingFunctionPresentation="method 'InitAbility'">
-            <startOffsets>
-              <option value="407" />
-            </startOffsets>
-            <endOffsets>
-              <option value="439" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

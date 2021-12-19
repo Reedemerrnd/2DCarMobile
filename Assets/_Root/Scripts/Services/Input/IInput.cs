@@ -7,5 +7,7 @@ namespace Game.Views
         public IReadOnlySubscriptionProperty<float> XAxis { get; }
         public void Init();
 
+        void Lock();
+        void Unlock();
     }
 }

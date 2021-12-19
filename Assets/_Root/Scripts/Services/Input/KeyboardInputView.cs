@@ -1,12 +1,12 @@
-using UnityEngine;
 using Game.Utils;
+using UnityEngine;
 
 namespace Game.Views
 {
     internal class KeyboardInputView : MonoBehaviour, IInput
     {
         private SubscriptionProperty<float> _xAxis;
-
+        private bool _isLocked;
         public IReadOnlySubscriptionProperty<float> XAxis => _xAxis;
 
 
@@ -15,10 +15,20 @@ namespace Game.Views
             _xAxis = new SubscriptionProperty<float>(0f);
         }
 
-
-        void Update()
+        public void Lock()
         {
-            _xAxis.Value = Input.GetAxis("Horizontal");
+            _isLocked = true;
+        }
+
+        public void Unlock()
+        {
+            _isLocked = false;
+        }
+
+
+        private void Update()
+        {
+            if (!_isLocked) _xAxis.Value = Input.GetAxis("Horizontal");
         }
     }
 }
