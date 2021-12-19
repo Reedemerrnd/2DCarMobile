@@ -9,11 +9,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dc56f6-a384-4dde-a68c-fd8fbab9bef1" name="Changes" comment="ability core refactoring">
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/TweenedUI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/TweenedUI/ShackingButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/UI/TweenedUI/ShackingButton.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2DCarMobile/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/InGame.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/InGame.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/MainMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/MainMenu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/SettingsMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/Prefabs/UI/SettingsMenu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Resources/ServicesSettings/IAP/ProductLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Resources/ServicesSettings/IAP/ProductLibrary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/InGameUIView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Scripts/Game/InGameUIView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +39,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
